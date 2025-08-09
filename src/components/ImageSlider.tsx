@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Crown, Download, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import slider1 from "@/assets/slider-1.jpg";
 import slider2 from "@/assets/slider-2.jpg";
@@ -11,18 +11,21 @@ const ImageSlider = () => {
   const slides = [
     {
       image: slider1,
-      title: "Luxury Commercial Complex",
-      description: "Experience premium shopping and dining at your doorstep"
+      title: "MAHARANA",
+      subtitle: "MANSION",
+      description: "Experience the legendary concept of affordable luxury housing. Where heritage meets modernity in perfect harmony."
     },
     {
       image: slider2,
-      title: "Landscaped Gardens",
-      description: "Beautiful green spaces for relaxation and recreation"
+      title: "MAHARANA",
+      subtitle: "MANSION", 
+      description: "Beautiful landscaped gardens and premium amenities designed for modern royal living in the heart of Neemrana."
     },
     {
       image: slider3,
-      title: "Modern Row Houses",
-      description: "Contemporary living with traditional architectural elements"
+      title: "MAHARANA",
+      subtitle: "MANSION",
+      description: "Contemporary architecture blended with traditional elegance, offering 144 premium apartments across 1.25 acres."
     }
   ];
 
@@ -64,24 +67,50 @@ const ImageSlider = () => {
             {/* Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container mx-auto px-4">
-                <div className="max-w-2xl">
-                  <h2 className={`text-5xl lg:text-7xl font-bold text-royal-foreground mb-6 transition-all duration-700 ${
+                <div className="max-w-4xl mx-auto text-center">
+                  {/* Badge */}
+                  <div className={`inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full px-6 py-2 mb-8 transition-all duration-700 ${
+                    index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  }`}>
+                    <Crown className="w-5 h-5 text-gold" />
+                    <span className="text-gold font-semibold">A Royal Address. A Modern Legacy.</span>
+                  </div>
+
+                  {/* Main Heading */}
+                  <h1 className={`text-6xl lg:text-8xl font-bold text-royal-foreground mb-6 leading-tight transition-all duration-700 delay-100 ${
                     index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                   }`}>
                     {slide.title}
-                  </h2>
-                  <p className={`text-xl lg:text-2xl text-royal-foreground/90 mb-8 transition-all duration-700 delay-200 ${
+                    <span className="block text-gold">{slide.subtitle}</span>
+                  </h1>
+
+                  {/* Subtitle */}
+                  <p className={`text-xl lg:text-2xl text-royal-foreground/90 mb-10 leading-relaxed max-w-3xl mx-auto transition-all duration-700 delay-200 ${
                     index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                   }`}>
                     {slide.description}
                   </p>
-                  <div className={`transition-all duration-700 delay-400 ${
+
+                  {/* CTA Buttons */}
+                  <div className={`flex flex-col sm:flex-row gap-4 mb-8 justify-center transition-all duration-700 delay-300 ${
                     index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                   }`}>
                     <Button variant="hero" size="xl" className="group">
-                      Explore More
-                      <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                      Enquire Now
                     </Button>
+                    <Button variant="premium" size="xl" className="group">
+                      <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                      Download Brochure
+                    </Button>
+                  </div>
+
+                  {/* Location */}
+                  <div className={`flex items-center gap-2 text-royal-foreground/80 justify-center transition-all duration-700 delay-400 ${
+                    index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  }`}>
+                    <MapPin className="w-5 h-5 text-gold" />
+                    <span className="text-lg">Near Railway Station, Industrial Area, Neemrana</span>
                   </div>
                 </div>
               </div>
@@ -120,18 +149,10 @@ const ImageSlider = () => {
         ))}
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-10 hidden xl:block animate-bounce">
-        <div className="bg-card/20 backdrop-blur-sm border border-gold/30 rounded-2xl p-6 text-center gold-shimmer">
-          <div className="text-4xl font-bold text-gold mb-2">144</div>
-          <div className="text-royal-foreground/80">Premium Units</div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-20 right-20 hidden xl:block animate-pulse">
-        <div className="bg-card/20 backdrop-blur-sm border border-royal/30 rounded-2xl p-6 text-center">
-          <div className="text-2xl font-bold text-royal-foreground mb-2">RERA Approved</div>
-          <div className="text-royal-foreground/80 text-sm">RAJ/P/2020/1576</div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-royal-foreground/40 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-gold rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
