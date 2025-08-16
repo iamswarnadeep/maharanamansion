@@ -31,21 +31,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20" style={{ background: 'var(--gradient-primary)' }}>
+    <section id="contact" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
-            <Crown className="w-5 h-5 text-gold" />
-            <span className="text-gold font-semibold">Get in Touch</span>
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
+            <Crown className="w-5 h-5 text-primary" />
+            <span className="text-primary font-semibold">Get in Touch</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
             Schedule Your
             <span className="block text-gold">Royal Visit</span>
           </h2>
           
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Experience affordable but premium housing blended with simplicity. 
             Book your site visit today and witness the royal lifestyle awaiting you.
           </p>
@@ -168,19 +168,19 @@ const Contact = () => {
             </div>
 
             {/* Download Section */}
-            <div className="rounded-2xl p-8 text-center" style={{ background: 'var(--gradient-soft)' }}>
-              <h4 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-secondary rounded-2xl p-8 text-center">
+              <h4 className="text-2xl font-bold text-secondary-foreground mb-4">
                 Download Resources
               </h4>
-              <p className="text-white/90 mb-6">
+              <p className="text-secondary-foreground/90 mb-6">
                 Get detailed information about floor plans, pricing, and payment options.
               </p>
               <div className="space-y-3">
-                <Button variant="default" size="lg" className="w-full bg-white/30 border-white/10 text-white hover:bg-white hover:text-primary">
+                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
                   <Download className="w-5 h-5" />
                   Project Brochure
                 </Button>
-                <Button variant="outline" size="lg" className="w-full bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary">
+                <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
                   <Download className="w-5 h-5" />
                   Floor Plans
                 </Button>
