@@ -78,6 +78,7 @@ export default {
 			fontFamily: {
 				'playfair': ['Playfair Display', 'serif'],
 				'inter': ['Inter', 'sans-serif'],
+				'dala': ['Dala Prisma Web Roman Regular', 'serif'],
 				'hero': ['Playfair Display', 'serif'], // Using Playfair as fallback for Dala Prisma
 			},
 			boxShadow: {

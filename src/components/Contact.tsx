@@ -176,7 +176,7 @@ const Contact = () => {
                 Get detailed information about floor plans, pricing, and payment options.
               </p>
               <div className="space-y-3">
-                <Button variant="default" size="lg" className="w-full">
+                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
                   <Download className="w-5 h-5" />
                   Project Brochure
                 </Button>
@@ -191,7 +191,7 @@ const Contact = () => {
             <div className="bg-card rounded-2xl p-6 shadow-soft border border-border">
               <h4 className="font-bold text-lg mb-4 royal-heading">Legal Information</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong>RERA Number:</strong> RAJ/P/2020/1576</p>
+                <p><strong>RERA Number:</strong> RAJ/P/2020/1376</p>
                 <p><strong>Developer:</strong> Genoatechinfratech Pvt. Ltd.</p>
                 <p><strong>Project Status:</strong> 80% Construction Complete</p>
               </div>

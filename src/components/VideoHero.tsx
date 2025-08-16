@@ -1,9 +1,10 @@
-import { Phone, Download } from "lucide-react";
+import { Crown, Phone, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import brochure from "@/assets/brochure.pdf"; // Adjust the path as necessary
 
 const VideoHero = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[85vh] overflow-hidden">
       {/* Video Background - Using placeholder for now */}
       <div className="absolute inset-0">
         <video
@@ -12,48 +13,49 @@ const VideoHero = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          poster="/placeholder.svg"
+          src="https://cdn.pixabay.com/video/2024/05/08/211152_tiny.mp4"
         >
-          <source src="/placeholder-video.mp4" type="video/mp4" />
           {/* Fallback image */}
-          <img 
-            src="/placeholder.svg" 
-            alt="Maharana Mansion" 
+          <img
+            src="/placeholder.svg"
+            alt="Maharana Mansion"
             className="w-full h-full object-cover"
           />
         </video>
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-primary/60" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content Overlay */}
       <div className="relative h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-6 py-2 mb-6">
+            <Crown className="w-5 h-5 text-gold" />
+            <span className="text-gold font-semibold">Maharana Mansion</span>
+          </div>
           {/* Main Heading */}
-          <h1 className="hero-font text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Royal Heritage Living
-          </h1>
-          
-          {/* Subheading */}
-          <h2 className="hero-font text-2xl md:text-4xl lg:text-5xl font-medium text-white/90 mb-8">
-            Where Legacy
-            <br />
-            Meets Luxury
-          </h2>
+          <div className="hero-text text-5xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            Legendary Concept of
+          </div>
+          <div className="hero-text text-5xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            Affortable Living
+          </div>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <Button 
-              size="lg" 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <Button
+              size="lg"
               className="bg-primary text-white border-2 border-primary hover:bg-white hover:text-primary transition-all duration-300 px-8 py-4 text-lg font-semibold body-font"
+              onClick={() => window.location.href = "#contact"}
             >
               <Phone className="w-5 h-5 mr-2" />
               Enquire Now
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary transition-all duration-300 px-8 py-4 text-lg font-semibold body-font"
+              onClick={() => window.open(brochure, "_blank")}
             >
               <Download className="w-5 h-5 mr-2" />
               Download Brochure

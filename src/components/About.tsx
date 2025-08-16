@@ -103,10 +103,10 @@ const About = () => {
             focusing on the unique requirements of modern families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg">
+            <Button variant="default" size="lg" onClick={() => window.location.href = "#contact"}>
               Schedule a Visit
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" >
               Download Floor Plans
             </Button>
           </div>
