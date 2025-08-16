@@ -106,7 +106,7 @@ const About = () => {
             <Button variant="default" size="lg" onClick={() => window.location.href = "#contact"}>
               Schedule a Visit
             </Button>
-            <Button variant="outline" size="lg" >
+            <Button className="bg-transparent text-primary border-2 border-primary" size="lg" >
               Download Floor Plans
             </Button>
           </div>

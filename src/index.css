@@ -276,3 +276,39 @@ All colors are HSL values inspired by Rajasthani palace architecture
     @apply bg-primary-dark;
   }
 }
+
+@layer utilities {
+
+  /* Background gradient as primary */
+  .bg-primary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  .bg-secondary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  .bg-royal {
+    background: linear-gradient(135deg,
+        rgb(134, 5, 12) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  /* Text gradient for text-primary */
+  .text-primary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hover background override */
+  .hover\:text-primary:hover {
+    color: white !important;
+  }
+}
