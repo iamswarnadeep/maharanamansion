@@ -18,7 +18,6 @@ const VideoHero = () => {
           {/* Fallback image */}
           <img
             src="/placeholder.svg"
-            
             alt="Maharana Mansion"
             className="w-full h-full object-cover"
           />
@@ -46,7 +45,7 @@ const VideoHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Button
               size="lg"
-              variant="default"
+              className="bg-primary text-white border-2 border-primary hover:bg-white hover:text-primary transition-all duration-300 px-8 py-4 text-lg font-semibold body-font"
               onClick={() => window.location.href = "#contact"}
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -55,7 +54,7 @@ const VideoHero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="bg-transparent text-white border-2 border-white hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 px-8 py-4 text-md font-semibold body-font"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary transition-all duration-300 px-8 py-4 text-lg font-semibold body-font"
               onClick={() => window.open(brochure, "_blank")}
             >
               <Download className="w-5 h-5 mr-2" />

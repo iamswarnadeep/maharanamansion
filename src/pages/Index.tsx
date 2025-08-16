@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import ImageSlider from "@/components/ImageSlider";
 import VideoHero from "@/components/VideoHero";
 import About from "@/components/About";
 import Amenities from "@/components/Amenities";
