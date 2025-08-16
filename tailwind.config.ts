@@ -75,11 +75,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			backgroundImage: {
-				'gradient-royal': 'var(--gradient-royal)',
-				'gradient-gold': 'var(--gradient-gold)',
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-warm': 'var(--gradient-warm)'
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'dala': ['Dala Prisma Web Roman Regular', 'serif'],
+				'hero': ['Playfair Display', 'serif'], // Using Playfair as fallback for Dala Prisma
 			},
 			boxShadow: {
 				'luxury': 'var(--shadow-luxury)',

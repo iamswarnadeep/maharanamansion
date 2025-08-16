@@ -1,5 +1,6 @@
-import { Crown, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Crown, Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
+import mainlogo from "@/assets/maharana-logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -28,15 +29,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={logo} alt="Maharana Mansion" className="h-12 w-12" />
-              <div>
+              <img src={mainlogo} alt="Maharana Mansion" className="h-[120px] w-full bg-white rounded-sm" />
+              {/* <div>
                 <h1 className="text-xl font-bold">Maharana</h1>
                 <span className="text-sm text-gold">MANSION</span>
-              </div>
+              </div> */}
             </div>
             <p className="text-royal-foreground/80 mb-6 leading-relaxed">
-              Experience the legendary concept of affordable luxury housing where 
-              heritage meets modern living in perfect harmony.
+              Experience the legendary concept of affordable luxury housing.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">
@@ -89,15 +89,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-gold mt-1" />
-                <div>
-                  <p className="text-royal-foreground/80">+91 98292 296-296</p>
-                  <p className="text-royal-foreground/80">+91 18001-296-296</p>
+                <div onClick={() => window.location.href = "tel:+18001296296"} style={{ cursor: 'pointer' }}>
+                  {/* <p className="text-royal-foreground/80">+91-98292-296296</p> */}
+                  <p className="text-royal-foreground/80">+1800-129-6296</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-gold mt-1" />
-                <div>
+                <div onClick={() => window.location.href = "mailto:info@maharanamansion.com"} style={{ cursor: 'pointer' }}>
                   <p className="text-royal-foreground/80">info@maharanamansion.com</p>
                 </div>
               </div>
@@ -119,12 +119,12 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-royal-foreground/80 text-sm">
-              © 2024 Maharana Mansion. All rights reserved. | RERA: RAJ/P/2020/1576
+              © 2025 Maharana Mansion. All rights reserved. | RERA: RAJ/P/2020/1376
             </div>
             <div className="flex items-center gap-1 text-sm text-royal-foreground/80">
               <span>Developed by</span>
-              <Crown className="w-4 h-4 text-gold mx-1" />
-              <span className="text-gold">Genoatechinfratech Pvt. Ltd.</span>
+              <Heart className="w-4 h-4 text-gold mx-1" />
+              <span className="text-gold">Swarnadeep</span>
             </div>
           </div>
         </div>
