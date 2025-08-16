@@ -52,8 +52,8 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-card rounded-3xl p-8 shadow-luxury">
+          {/* Contact Form - Sticky on desktop */}
+          <div className="lg:sticky lg:top-24 lg:self-start bg-card rounded-3xl p-8 shadow-luxury">
             <h3 className="text-2xl font-bold mb-6 royal-heading">Send us an Enquiry</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
