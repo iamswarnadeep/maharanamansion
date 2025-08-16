@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted">
+    <section id="contact" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -52,8 +52,8 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form - Sticky on desktop */}
-          <div className="lg:sticky lg:top-24 lg:self-start bg-card rounded-3xl p-8 shadow-luxury">
+          {/* Contact Form */}
+          <div className="bg-card rounded-3xl p-8 shadow-luxury">
             <h3 className="text-2xl font-bold mb-6 royal-heading">Send us an Enquiry</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -114,10 +114,10 @@ const Contact = () => {
           <div className="space-y-8">
             {/* Contact Cards */}
             <div className="grid gap-6">
-              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary p-3 rounded-xl">
-                    <Phone className="w-6 h-6 text-primary-foreground" />
+                  <div className="bg-gradient-royal p-3 rounded-xl">
+                    <Phone className="w-6 h-6 text-royal-foreground" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Phone Numbers</h4>
@@ -127,10 +127,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent p-3 rounded-xl">
-                    <Mail className="w-6 h-6 text-accent-foreground" />
+                  <div className="bg-gradient-gold p-3 rounded-xl">
+                    <Mail className="w-6 h-6 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Email Address</h4>
@@ -140,10 +140,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary p-3 rounded-xl">
-                    <MapPin className="w-6 h-6 text-primary-foreground" />
+                  <div className="bg-gradient-royal p-3 rounded-xl">
+                    <MapPin className="w-6 h-6 text-royal-foreground" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Location</h4>
@@ -153,10 +153,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
+              <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent p-3 rounded-xl">
-                    <Clock className="w-6 h-6 text-accent-foreground" />
+                  <div className="bg-gradient-gold p-3 rounded-xl">
+                    <Clock className="w-6 h-6 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Visit Hours</h4>
@@ -168,19 +168,19 @@ const Contact = () => {
             </div>
 
             {/* Download Section */}
-            <div className="bg-secondary rounded-2xl p-8 text-center">
-              <h4 className="text-2xl font-bold text-secondary-foreground mb-4">
+            <div className="bg-gradient-royal rounded-2xl p-8 text-center">
+              <h4 className="text-2xl font-bold text-royal-foreground mb-4">
                 Download Resources
               </h4>
-              <p className="text-secondary-foreground/90 mb-6">
+              <p className="text-royal-foreground/90 mb-6">
                 Get detailed information about floor plans, pricing, and payment options.
               </p>
               <div className="space-y-3">
-                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+                <Button variant="premium" size="lg" className="w-full">
                   <Download className="w-5 h-5" />
                   Project Brochure
                 </Button>
-                <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+                <Button variant="outline" size="lg" className="w-full bg-royal-foreground/10 border-royal-foreground/30 text-royal-foreground hover:bg-royal-foreground hover:text-royal">
                   <Download className="w-5 h-5" />
                   Floor Plans
                 </Button>
@@ -188,10 +188,10 @@ const Contact = () => {
             </div>
 
             {/* Legal Info */}
-            <div className="bg-card rounded-2xl p-6 shadow-soft border border-border">
+            <div className="bg-card rounded-2xl p-6 shadow-soft">
               <h4 className="font-bold text-lg mb-4 royal-heading">Legal Information</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong>RERA Number:</strong> RAJ/P/2020/1376</p>
+                <p><strong>RERA Number:</strong> RAJ/P/2020/1576</p>
                 <p><strong>Developer:</strong> Genoatechinfratech Pvt. Ltd.</p>
                 <p><strong>Project Status:</strong> 80% Construction Complete</p>
               </div>

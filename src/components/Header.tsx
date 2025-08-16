@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Crown, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
-import mainlogo from "@/assets/maharana-logo.png";
-import brochure from "@/assets/brochure.pdf";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +33,7 @@ const Header = () => {
             </span>
           </div>
           <div className="gold-accent hidden md:block">
-            RERA: RAJ/P/2020/1376
+            RERA: RAJ/P/2020/1576
           </div>
         </div>
       </div>
@@ -46,11 +44,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-full" />
-            <div>
-              {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
-              <span className="text-sm gold-accent body-font">MANSION</span> */}
-            </div>
+              <img src={logo} alt="Maharana Mansion" className="h-12 w-12" />
+              <div>
+                <h1 className="text-xl font-bold royal-heading">Maharana</h1>
+                <span className="text-sm gold-accent">MANSION</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -59,7 +57,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium body-font"
+                  className="text-foreground hover:text-primary transition-colors font-medium"
                 >
                   {item.name}
                 </a>
@@ -105,10 +103,10 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
-                <Button variant="outline" size="sm" onClick={() => window.open(brochure, "_blank")}>
+                <Button variant="outline" size="sm">
                   Download Brochure
                 </Button>
-                <Button variant="royal" size="sm" onClick={() => window.location.href = "#contact"}>
+                <Button variant="royal" size="sm">
                   <Crown className="w-4 h-4" />
                   Enquire Now
                 </Button>

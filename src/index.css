@@ -8,7 +8,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
 @layer base {
   :root {
-    /* Updated Color Palette */
+    /* Royal Heritage Color Palette */
     --background: 50 15% 98%;
     --foreground: 25 15% 15%;
 
@@ -18,11 +18,11 @@ All colors are HSL values inspired by Rajasthani palace architecture
     --popover: 45 20% 97%;
     --popover-foreground: 25 15% 15%;
 
-    /* Primary: #800020 - Dark Red/Maroon */
-    --primary: 348 75% 25%;
+    /* Royal Red - Primary Brand Color (Based on Logo) */
+    --primary: 0 78% 50%;
     --primary-foreground: 45 20% 97%;
-    --primary-light: 348 65% 35%;
-    --primary-dark: 348 85% 20%;
+    --primary-light: 0 65% 60%;
+    --primary-dark: 0 85% 40%;
 
     /* Secondary: #4f0341 - Dark Purple */
     --secondary: 311 86% 16%;
@@ -33,16 +33,16 @@ All colors are HSL values inspired by Rajasthani palace architecture
     --gold-light: 45 82% 68%;
     --gold-dark: 45 92% 48%;
 
-    /* Regular Paragraph Text: #847062 - Brownish Gray */
+    /* Elegant Cream & Warm Tones */
     --muted: 45 25% 94%;
     --muted-foreground: 30 15% 46%;
 
     --accent: 35 50% 85%;
     --accent-foreground: 25 15% 15%;
 
-    /* Royal Purple - Using Secondary Color */
-    --royal: 311 86% 16%;
-    --royal-light: 311 76% 26%;
+    /* Royal Purple */
+    --royal: 280 60% 25%;
+    --royal-light: 280 45% 35%;
     --royal-foreground: 45 20% 97%;
 
     --destructive: 0 84% 60%;
@@ -50,9 +50,15 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
     --border: 35 25% 88%;
     --input: 35 25% 88%;
-    --ring: 348 65% 25%;
+    --ring: 0 65% 45%;
 
     --radius: 0.75rem;
+
+    /* Premium Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--royal)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--royal)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
     /* Elegant Shadows */
     --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.15);
@@ -91,13 +97,13 @@ All colors are HSL values inspired by Rajasthani palace architecture
     --popover: 25 15% 10%;
     --popover-foreground: 45 20% 95%;
 
-    --primary: 348 65% 35%;
+    --primary: 0 75% 55%;
     --primary-foreground: 45 20% 95%;
-    --primary-light: 348 55% 45%;
-    --primary-dark: 348 75% 25%;
+    --primary-light: 0 65% 65%;
+    --primary-dark: 0 85% 45%;
 
-    --secondary: 311 76% 26%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 45 80% 60%;
+    --secondary-foreground: 25 15% 8%;
     --gold: 45 80% 60%;
     --gold-light: 45 75% 70%;
     --gold-dark: 45 85% 50%;
@@ -108,8 +114,8 @@ All colors are HSL values inspired by Rajasthani palace architecture
     --accent: 35 40% 20%;
     --accent-foreground: 45 20% 95%;
 
-    --royal: 311 76% 26%;
-    --royal-light: 311 66% 36%;
+    --royal: 280 55% 35%;
+    --royal-light: 280 45% 45%;
     --royal-foreground: 45 20% 95%;
 
     --destructive: 0 75% 60%;
@@ -117,7 +123,12 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
     --border: 25 15% 20%;
     --input: 25 15% 20%;
-    --ring: 348 65% 35%;
+    --ring: 0 75% 55%;
+
+    --gradient-royal: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--royal)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--royal)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
     --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.25);
     --shadow-gold: 0 20px 40px -8px hsl(var(--gold) / 0.3);
@@ -125,12 +136,12 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
     --sidebar-background: 25 15% 10%;
     --sidebar-foreground: 45 20% 95%;
-    --sidebar-primary: 348 65% 35%;
+    --sidebar-primary: 0 75% 55%;
     --sidebar-primary-foreground: 45 20% 95%;
     --sidebar-accent: 25 15% 15%;
     --sidebar-accent-foreground: 45 20% 95%;
     --sidebar-border: 25 15% 20%;
-    --sidebar-ring: 348 65% 35%;
+    --sidebar-ring: 0 75% 55%;
   }
 }
 
@@ -158,9 +169,9 @@ All colors are HSL values inspired by Rajasthani palace architecture
     /* Using Playfair as fallback for Dala Prisma */
   }
 
+  /* Luxury Typography */
   .royal-heading {
-    @apply text-primary font-bold;
-    font-family: 'Playfair Display', serif;
+    @apply bg-gradient-to-r from-primary to-royal bg-clip-text text-transparent font-bold;
   }
 
   .gold-accent {
@@ -178,8 +189,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
   .gold-shimmer::before {
     content: '';
-    @apply absolute inset-0 -translate-x-full;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.3), transparent);
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold/30 to-transparent;
     animation: shimmer 3s infinite;
   }
 
