@@ -36,21 +36,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted">
+    <section id="about" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
             <Crown className="w-5 h-5 text-primary" />
-            <span className="text-primary font-semibold body-font">About The Project</span>
+            <span className="text-primary font-semibold">About The Project</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold royal-heading heading-font mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
             Where Heritage Meets
             <span className="block text-gold">Modern Luxury</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed body-font">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Maharana Mansion brings you the legendary concept of affordable luxury housing. 
             Experience the perfect blend of royal heritage and contemporary living in this 
             meticulously planned residential project.
@@ -60,20 +60,20 @@ const About = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">1.25</div>
-            <div className="text-muted-foreground text-lg body-font">Acres</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">1.25</div>
+            <div className="text-muted-foreground text-lg">Acres</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">144</div>
-            <div className="text-muted-foreground text-lg body-font">Apartments</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">144</div>
+            <div className="text-muted-foreground text-lg">Apartments</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">004</div>
-            <div className="text-muted-foreground text-lg body-font">Towers</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">004</div>
+            <div className="text-muted-foreground text-lg">Towers</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">209</div>
-            <div className="text-muted-foreground text-lg body-font">Parking</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">209</div>
+            <div className="text-muted-foreground text-lg">Parking</div>
           </div>
         </div>
 
@@ -84,29 +84,29 @@ const About = () => {
               key={index}
               className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 luxury-hover"
             >
-              <div className="bg-primary p-4 rounded-xl w-fit mb-6">
-                <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="bg-gradient-royal p-4 rounded-xl w-fit mb-6">
+                <feature.icon className="w-8 h-8 text-royal-foreground" />
               </div>
-              <h3 className="text-xl font-bold mb-4 heading-font">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed body-font">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
         <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-luxury text-center">
-          <h3 className="text-3xl lg:text-4xl font-bold royal-heading heading-font mb-6">
+          <h3 className="text-3xl lg:text-4xl font-bold royal-heading mb-6">
             Experience Royal Living Today
           </h3>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto body-font">
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Renowned architects have crafted this project with immense attention to detail, 
             focusing on the unique requirements of modern families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" onClick={() => window.location.href = "#contact"}>
+            <Button variant="royal" size="lg">
               Schedule a Visit
             </Button>
-            <Button variant="outline" size="lg" >
+            <Button variant="premium" size="lg">
               Download Floor Plans
             </Button>
           </div>
