@@ -39,14 +39,14 @@ const Contact = () => {
             <Crown className="w-5 h-5 text-primary" />
             <span className="text-primary font-semibold">Get in Touch</span>
           </div>
-          
+
           <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
             Schedule Your
             <span className="block text-gold">Royal Visit</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Experience affordable but premium housing blended with simplicity. 
+            Experience affordable but premium housing blended with simplicity.
             Book your site visit today and witness the royal lifestyle awaiting you.
           </p>
         </div>
@@ -55,7 +55,7 @@ const Contact = () => {
           {/* Contact Form - Sticky on desktop */}
           <div className="lg:sticky lg:top-24 lg:self-start bg-card rounded-3xl p-8 shadow-luxury">
             <h3 className="text-2xl font-bold mb-6 royal-heading">Send us an Enquiry</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
@@ -67,7 +67,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Input
                   name="phone"
@@ -79,7 +79,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Input
                   name="email"
@@ -91,7 +91,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Textarea
                   name="message"
@@ -103,7 +103,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" variant="royal" size="lg" className="w-full">
+              <Button type="submit" variant="default" size="lg" className="w-full">
                 <Send className="w-5 h-5" />
                 Submit Enquiry
               </Button>
@@ -122,7 +122,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Phone Numbers</h4>
                     {/* <p className="text-muted-foreground mb-1">+91 98292 296-296</p> */}
-                    <p className="text-muted-foreground">+1800-129-6296</p>
+                    <p className="text-muted-foreground"><a href="tel:1800-309-5121">1800-309-5121</a></p>
                   </div>
                 </div>
               </div>
@@ -134,8 +134,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Email Address</h4>
-                    <p className="text-muted-foreground">info@maharanamansion.com</p>
-                    <p className="text-muted-foreground">sales@maharanamansion.com</p>
+                    <p className="text-muted-foreground"><a href="mailto:contact@maharanamansion.com">contact@maharanamansion.com</a></p>
+                    {/* <p className="text-muted-foreground">sales@maharanamansion.com</p> */}
                   </div>
                 </div>
               </div>
@@ -147,8 +147,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Location</h4>
-                    <p className="text-muted-foreground">Near Railway Station</p>
-                    <p className="text-muted-foreground">Industrial Area, Neemrana</p>
+                    <p className="text-muted-foreground">Neemrana Ghiloth Industrial Road, Neemrana, Rajasthan 301705</p>
+                    <p className="text-primary"><a href="https://maps.app.goo.gl/6v3FATqowXQatP1Y6" target="_blank">Click here to open in Google Maps</a></p>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Visit Hours</h4>
                     <p className="text-muted-foreground">Monday - Sunday</p>
-                    <p className="text-muted-foreground">9:00 AM - 7:00 PM</p>
+                    <p className="text-muted-foreground">10:00AM - 6:00PM</p>
                   </div>
                 </div>
               </div>

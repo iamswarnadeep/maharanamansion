@@ -27,11 +27,11 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Phone className="w-4 h-4" />
-              <a href="tel:+1800-120-6206">+1800-120-6206</a>
+              <a href="tel:1800-309-5121">1800-309-5121</a>
             </span>
             <span className="flex items-center gap-1">
               <Mail className="w-4 h-4" />
-              <a href="mailto:info@maharanamansion.com">info@maharanamansion.com</a>
+              <a href="mailto:contact@maharanamansion.com">contact@maharanamansion.com</a>
             </span>
           </div>
           <div className="gold-accent hidden md:block">
@@ -68,10 +68,10 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button variant="outline" size="sm" onClick={() => window.open(brochure, "_blank")}>
+              <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
                 Download Brochure
               </Button>
-              <Button variant="royal" size="sm" onClick={() => window.location.href = "#contact"}>
+              <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"}>
                 <Crown className="w-4 h-4" />
                 Enquire Now
               </Button>

@@ -91,22 +91,24 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-gold mt-1" />
                 <div onClick={() => window.location.href = "tel:+18001296296"} style={{ cursor: 'pointer' }}>
                   {/* <p className="text-royal-foreground/80">+91-98292-296296</p> */}
-                  <p className="text-royal-foreground/80">+1800-129-6296</p>
+                  <p className="text-royal-foreground/80">1800-309-5121</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-gold mt-1" />
-                <div onClick={() => window.location.href = "mailto:info@maharanamansion.com"} style={{ cursor: 'pointer' }}>
-                  <p className="text-royal-foreground/80">info@maharanamansion.com</p>
+                <div onClick={() => window.location.href = "mailto:contact@maharanamansion.com"} style={{ cursor: 'pointer' }}>
+                  <p className="text-royal-foreground/80">contact@maharanamansion.com</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold mt-1" />
                 <div>
-                  <p className="text-royal-foreground/80">Near Railway Station</p>
-                  <p className="text-royal-foreground/80">Industrial Area, Neemrana</p>
+                  <a href="https://maps.app.goo.gl/6v3FATqowXQatP1Y6" target="_blank">
+                  <p className="text-royal-foreground/80">Neemrana Ghiloth Industrial Road,</p>
+                  <p className="text-royal-foreground/80">Neemrana, Rajasthan 301705</p>
+                  </a>
                 </div>
               </div>
             </div>

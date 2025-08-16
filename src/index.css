@@ -27,7 +27,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
     /* Secondary: #4f0341 - Dark Purple */
     --secondary: 311 86% 16%;
     --secondary-foreground: 45 20% 97%;
-    
+
     /* Light Accent: #f2ba36 - Gold */
     --gold: 45 88% 58%;
     --gold-light: 45 82% 68%;
@@ -36,7 +36,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
     /* Regular Paragraph Text: #847062 - Brownish Gray */
     --muted: 45 25% 94%;
     --muted-foreground: 30 15% 46%;
-    
+
     --accent: 35 50% 85%;
     --accent-foreground: 25 15% 15%;
 
@@ -104,7 +104,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
     --muted: 25 15% 15%;
     --muted-foreground: 30 15% 60%;
-    
+
     --accent: 35 40% 20%;
     --accent-foreground: 45 20% 95%;
 
@@ -154,7 +154,8 @@ All colors are HSL values inspired by Rajasthani palace architecture
   }
 
   .hero-font {
-    font-family: 'Playfair Display', serif; /* Using Playfair as fallback for Dala Prisma */
+    font-family: 'Playfair Display', serif;
+    /* Using Playfair as fallback for Dala Prisma */
   }
 
   .royal-heading {
@@ -206,9 +207,12 @@ All colors are HSL values inspired by Rajasthani palace architecture
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-20px);
     }
@@ -219,6 +223,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
       opacity: 0;
       transform: translateY(50px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -229,9 +234,11 @@ All colors are HSL values inspired by Rajasthani palace architecture
     0% {
       opacity: 0;
     }
+
     50% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -242,12 +249,15 @@ All colors are HSL values inspired by Rajasthani palace architecture
       opacity: 0;
       transform: scale(0.3);
     }
+
     50% {
       transform: scale(1.05);
     }
+
     70% {
       transform: scale(0.9);
     }
+
     100% {
       opacity: 1;
       transform: scale(1);
@@ -274,5 +284,41 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-dark;
+  }
+}
+
+@layer utilities {
+
+  /* Background gradient as primary */
+  .bg-primary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  .bg-secondary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  .bg-royal {
+    background: linear-gradient(135deg,
+        rgb(134, 5, 12) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+  }
+
+  /* Text gradient for text-primary */
+  .text-primary {
+    background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hover background override */
+  .hover\:text-primary:hover {
+    color: white !important;
   }
 }
