@@ -18,6 +18,7 @@ const VideoHero = () => {
           {/* Fallback image */}
           <img
             src="/placeholder.svg"
+            
             alt="Maharana Mansion"
             className="w-full h-full object-cover"
           />
