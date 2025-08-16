@@ -36,21 +36,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted">
+    <section id="about" className="py-20" style={{ background: 'var(--gradient-primary)' }}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
-            <Crown className="w-5 h-5 text-primary" />
-            <span className="text-primary font-semibold body-font">About The Project</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
+            <Crown className="w-5 h-5 text-gold" />
+            <span className="text-gold font-semibold body-font">About The Project</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl font-bold royal-heading heading-font mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold text-white heading-font mb-6">
             Where Heritage Meets
             <span className="block text-gold">Modern Luxury</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed body-font">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed body-font">
             Maharana Mansion brings you the legendary concept of affordable luxury housing. 
             Experience the perfect blend of royal heritage and contemporary living in this 
             meticulously planned residential project.
@@ -60,20 +60,20 @@ const About = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">1.25</div>
-            <div className="text-muted-foreground text-lg body-font">Acres</div>
+            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2 heading-font">1.25</div>
+            <div className="text-white/80 text-lg body-font">Acres</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">144</div>
-            <div className="text-muted-foreground text-lg body-font">Apartments</div>
+            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2 heading-font">144</div>
+            <div className="text-white/80 text-lg body-font">Apartments</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">004</div>
-            <div className="text-muted-foreground text-lg body-font">Towers</div>
+            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2 heading-font">004</div>
+            <div className="text-white/80 text-lg body-font">Towers</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">209</div>
-            <div className="text-muted-foreground text-lg body-font">Parking</div>
+            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2 heading-font">209</div>
+            <div className="text-white/80 text-lg body-font">Parking</div>
           </div>
         </div>
 
