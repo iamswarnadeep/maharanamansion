@@ -34,10 +34,10 @@ const VideoHero = () => {
             <span className="text-gold font-semibold">Maharana Mansion</span>
           </div>
           {/* Main Heading */}
-          <div className="hero-text text-5xl md:text-7xl font-dala text-white mb-2 leading-tight">
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
             Legendary Concept of
           </div>
-          <div className="hero-text text-5xl md:text-7xl font-dala text-white mb-2 leading-tight">
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
             Affortable Living
           </div>
 

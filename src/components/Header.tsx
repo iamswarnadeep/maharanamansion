@@ -23,22 +23,42 @@ const Header = () => {
     <>
       {/* Top Bar */}
       <div className="bg-royal text-royal-foreground py-2 px-4 text-sm">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-4">
+        <div className="container mx-auto flex justify-between items-center px-0 sm:px-4">
+          {/* LEFT (Phone + Email for desktop) */}
+          <div className="hidden md:flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Phone className="w-4 h-4" />
-              <a href="tel:+1800-120-6206">+1800-120-6206</a>
+              <a href="tel:1800-309-5121">1800-309-5121</a>
             </span>
             <span className="flex items-center gap-1">
               <Mail className="w-4 h-4" />
               <a href="mailto:info@maharanamansion.com">info@maharanamansion.com</a>
             </span>
           </div>
+
+          {/* Mobile LEFT (Phone only) */}
+          <div className="flex md:hidden items-center text-[12px]">
+            <span className="flex items-center gap-1">
+              <Phone className="w-3 h-3" />
+              <a href="tel:1800-309-5121">1800-309-5121</a>
+            </span>
+          </div>
+
+          {/* Mobile RIGHT (Email only) */}
+          <div className="flex md:hidden items-center text-[12px]">
+            <span className="flex items-center gap-1">
+              <Mail className="w-3 h-3" />
+              <a href="mailto:info@maharanamansion.com">info@maharanamansion.com</a>
+            </span>
+          </div>
+
+          {/* RERA (desktop only) */}
           <div className="gold-accent hidden md:block">
             RERA: RAJ/P/2020/1376
           </div>
         </div>
       </div>
+
 
       {/* Main Header */}
       <header className="bg-card/95 backdrop-blur-sm shadow-soft sticky top-0 z-50 border-b border-border">
@@ -47,10 +67,10 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-full" />
-            <div>
-              {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
+              <div>
+                {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
               <span className="text-sm gold-accent body-font">MANSION</span> */}
-            </div>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

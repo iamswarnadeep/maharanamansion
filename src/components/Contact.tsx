@@ -122,7 +122,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Phone Numbers</h4>
                     {/* <p className="text-muted-foreground mb-1">+91 98292 296-296</p> */}
-                    <p className="text-muted-foreground">+1800-129-6296</p>
+                    <p className="text-muted-foreground"><a href="tel:1800-309-5121">1800-309-5121</a></p>
                   </div>
                 </div>
               </div>
@@ -134,8 +134,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Email Address</h4>
-                    <p className="text-muted-foreground">info@maharanamansion.com</p>
-                    <p className="text-muted-foreground">sales@maharanamansion.com</p>
+                    <p className="text-muted-foreground"><a href="mailto:contact@maharanamansion.com">contact@maharanamansion.com</a></p>
+                    {/* <p className="text-muted-foreground">sales@maharanamansion.com</p> */}
                   </div>
                 </div>
               </div>
@@ -147,8 +147,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Location</h4>
-                    <p className="text-muted-foreground">Near Railway Station</p>
-                    <p className="text-muted-foreground">Industrial Area, Neemrana</p>
+                    <p className="text-muted-foreground">Neemrana Ghiloth Industrial Road, Neemarana, Rajasthan 301705</p>
+                    <p className="text-primary"><a href="https://maps.app.goo.gl/ibmrxCTJxCBsuuRy6" target="_blank">Click here to open in Google Maps</a></p>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Visit Hours</h4>
                     <p className="text-muted-foreground">Monday - Sunday</p>
-                    <p className="text-muted-foreground">9:00 AM - 7:00 PM</p>
+                    <p className="text-muted-foreground">10:00AM - 6:00PM</p>
                   </div>
                 </div>
               </div>
