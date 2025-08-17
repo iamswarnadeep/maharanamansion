@@ -14,7 +14,7 @@ const VideoHero = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          src={maharanaVideo}
+          src="https://cdn.pixabay.com/video/2024/05/08/211152_tiny.mp4"
         >
           {/* Fallback image */}
           <img
