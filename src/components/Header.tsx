@@ -66,7 +66,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-full" />
+              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-[140px]" />
               <div>
                 {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
               <span className="text-sm gold-accent body-font">MANSION</span> */}
