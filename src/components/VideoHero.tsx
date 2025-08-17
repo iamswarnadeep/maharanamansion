@@ -1,6 +1,7 @@
 import { Crown, Phone, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import brochure from "@/assets/brochure.pdf"; // Adjust the path as necessary
+import brochure from "@/assets/brochure.pdf";
+import maharanaVideo from "@/assets/maharana-main-video.mp4";
 
 const VideoHero = () => {
   return (
@@ -13,7 +14,7 @@ const VideoHero = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          src="https://cdn.pixabay.com/video/2024/05/08/211152_tiny.mp4"
+          src={maharanaVideo}
         >
           {/* Fallback image */}
           <img

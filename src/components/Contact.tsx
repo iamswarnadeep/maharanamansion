@@ -14,13 +14,45 @@ const Contact = () => {
     message: ""
   });
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   toast({
+  //     title: "Enquiry Submitted!",
+  //     description: "Thank you for your interest. Our team will contact you soon.",
+  //   });
+  //   setFormData({ name: "", phone: "", email: "", message: "" });
+  // };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Enquiry Submitted!",
-      description: "Thank you for your interest. Our team will contact you soon.",
+
+    window.Email.send({
+      SecureToken: "YOUR_SECURE_TOKEN", // you’ll get this from smtpjs.com
+      To: "your-email@example.com",     // your receiving email
+      From: formData.email,             // sender email (user input)
+      Subject: `New Enquiry from ${formData.name}`,
+      Body: `
+      <h3>New Enquiry Details</h3>
+      <p><b>Name:</b> ${formData.name}</p>
+      <p><b>Phone:</b> ${formData.phone}</p>
+      <p><b>Email:</b> ${formData.email}</p>
+      <p><b>Message:</b> ${formData.message || "No message provided"}</p>
+    `
+    }).then((message: string) => {
+      if (message === "OK") {
+        toast({
+          title: "Enquiry Submitted!",
+          description: "Thank you for your interest. Our team will contact you soon.",
+        });
+        setFormData({ name: "", phone: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
     });
-    setFormData({ name: "", phone: "", email: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,14 +71,14 @@ const Contact = () => {
             <Crown className="w-5 h-5 text-primary" />
             <span className="text-primary font-semibold">Get in Touch</span>
           </div>
-          
+
           <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
             Schedule Your
             <span className="block text-gold">Royal Visit</span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Experience affordable but premium housing blended with simplicity. 
+            Experience affordable but premium housing blended with simplicity.
             Book your site visit today and witness the royal lifestyle awaiting you.
           </p>
         </div>
@@ -55,7 +87,7 @@ const Contact = () => {
           {/* Contact Form - Sticky on desktop */}
           <div className="lg:sticky lg:top-24 lg:self-start bg-card rounded-3xl p-8 shadow-luxury">
             <h3 className="text-2xl font-bold mb-6 royal-heading">Send us an Enquiry</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
@@ -67,7 +99,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Input
                   name="phone"
@@ -79,7 +111,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Input
                   name="email"
@@ -91,7 +123,7 @@ const Contact = () => {
                   className="h-12"
                 />
               </div>
-              
+
               <div>
                 <Textarea
                   name="message"
@@ -148,7 +180,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Location</h4>
                     <p className="text-muted-foreground">Neemrana Ghiloth Industrial Road, Neemarana, Rajasthan 301705</p>
-                    <p className="text-primary"><a href="https://maps.app.goo.gl/ibmrxCTJxCBsuuRy6" target="_blank">Click here to open in Google Maps</a></p>
+                    <p className="text-primary"><a href="https://maps.app.goo.gl/ibmrxCTJxCBsuuRy6" target="_blank">Open in Google Maps</a></p>
                   </div>
                 </div>
               </div>
