@@ -224,7 +224,7 @@ const Contact = () => {
               <h4 className="font-bold text-lg mb-4 royal-heading">Legal Information</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><strong>RERA Number:</strong> RAJ/P/2020/1376</p>
-                <p><strong>Developer:</strong> Genoatechinfratech Pvt. Ltd.</p>
+                <p><strong>Developer:</strong> Gennext Infratech Pvt. Ltd.</p>
                 <p><strong>Project Status:</strong> 80% Construction Complete</p>
               </div>
             </div>
