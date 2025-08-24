@@ -8,18 +8,18 @@ import { Camera, Video, Image as ImageIcon, Building, ChevronLeft, ChevronRight,
 import rajputanaGallery from "@/assets/rajputana-gallery.jpg";
 import brochure from "@/assets/brochure.pdf";
 
-import Image1 from "@/assets/Image1.jpg";
-import Image2 from "@/assets/Image2.jpg";
-import Image3 from "@/assets/Image3.jpg";
-import Image4 from "@/assets/Image4.jpg";
-import Image5 from "@/assets/Image5.jpg";
-import Image6 from "@/assets/Image6.jpg";
-import Image7 from "@/assets/Image7.jpg";
-import Image8 from "@/assets/Image8.jpg";
-import Image9 from "@/assets/Image9.jpg";
-import Image10 from "@/assets/Image10.jpg";
-import Image11 from "@/assets/Image11.jpg";
-import Image12 from "@/assets/Image12.jpg";
+import Image1 from "@/assets/gallery/Image1.jpg";
+import Image2 from "@/assets/gallery/Image2.jpg";
+import Image3 from "@/assets/gallery/Image3.jpg";
+import Image4 from "@/assets/gallery/Image4.jpg";
+import Image5 from "@/assets/gallery/Image5.jpg";
+import Image6 from "@/assets/gallery/Image6.jpg";
+import Image7 from "@/assets/gallery/Image7.jpg";
+import Image8 from "@/assets/gallery/Image8.jpg";
+import Image9 from "@/assets/gallery/Image9.jpg";
+import Image10 from "@/assets/gallery/Image10.jpg";
+import Image11 from "@/assets/gallery/Image11.jpg";
+import Image12 from "@/assets/gallery/Image12.jpg";
 
 const Gallery = () => {
   // Use simple arrays of image sources (no titles/descriptions anywhere)
