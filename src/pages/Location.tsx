@@ -1,0 +1,408 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { MapPin, Car, Plane, Train, Building, Clock, School, Hospital } from "lucide-react";
+import aravaliMountains from "@/assets/aravali-mountains.jpg";
+
+const Location = () => {
+  const connectivity = [
+    {
+      icon: Car,
+      title: "By Road",
+      distance: "Delhi: 122 km",
+      time: "2 hours",
+      details: "Via NH-8, excellent highway connectivity"
+    },
+    {
+      icon: Train,
+      title: "By Train", 
+      distance: "Rewari Junction: 35 km",
+      time: "45 mins",
+      details: "Well-connected railway station"
+    },
+    {
+      icon: Plane,
+      title: "By Air",
+      distance: "IGI Airport: 140 km",
+      time: "2.5 hours",
+      details: "International airport accessibility"
+    }
+  ];
+
+  const landmarks = [
+    {
+      name: "Neemrana Fort Palace",
+      distance: "2 km",
+      type: "Heritage Hotel",
+      description: "Historic 15th-century fort palace, now a luxury heritage hotel"
+    },
+    {
+      name: "Korean Industrial Zone",
+      distance: "6 km", 
+      type: "Industrial Hub",
+      description: "Major employment hub with multinational companies"
+    },
+    {
+      name: "Queen's Baoli",
+      distance: "3 km",
+      type: "Historical Monument",
+      description: "Ancient stepwell showcasing Indo-Islamic architecture"
+    },
+    {
+      name: "Siliserh Lake",
+      distance: "25 km",
+      type: "Tourist Spot",
+      description: "Beautiful lake with boating and recreational activities"
+    }
+  ];
+
+  const amenities = [
+    {
+      icon: School,
+      title: "Education",
+      items: ["DAV Public School (5 km)", "Neemrana College (8 km)", "Various coaching centers"]
+    },
+    {
+      icon: Hospital,
+      title: "Healthcare", 
+      items: ["Neemrana Hospital (4 km)", "Primary Health Center (2 km)", "Specialty clinics nearby"]
+    },
+    {
+      icon: Building,
+      title: "Commercial",
+      items: ["Neemrana Market (3 km)", "Shopping complexes", "Banks and ATMs"]
+    },
+    {
+      icon: Clock,
+      title: "Entertainment",
+      items: ["Neemrana Fort events", "Adventure sports", "Cultural programs"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${aravaliMountains})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+        </div>
+        
+        <div className="relative z-10 text-center text-white px-4">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
+            <MapPin className="w-5 h-5 text-gold" />
+            <span className="font-semibold">Prime Location</span>
+          </div>
+          
+          <h1 className="text-5xl lg:text-7xl font-bold royal-heading heading-font mb-6">
+            Neemrana,
+            <span className="block text-gold">Rajasthan</span>
+          </h1>
+          
+          <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
+            Strategically located in the foothills of Aravali mountains with Delhi NCR connectivity
+          </p>
+        </div>
+      </section>
+
+      {/* Location Highlight */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8">
+              50 Acres of Prime Land
+            </h2>
+            
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury border border-primary/20 mb-16">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <MapPin className="w-8 h-8 text-primary" />
+                <h3 className="text-3xl font-bold text-primary heading-font">Strategic Acquisition</h3>
+              </div>
+              <p className="text-2xl font-bold text-foreground heading-font leading-relaxed">
+                Gennext has acquired <span className="text-primary">50 acres of prime land</span> under the foothills of 
+                <span className="text-secondary"> Neemrana Fort and the Aravali mountain range</span>
+              </p>
+            </div>
+
+            <p className="text-xl text-muted-foreground leading-relaxed body-font">
+              This exceptional location combines the serenity of mountain foothills with the convenience of 
+              urban connectivity, making it the perfect setting for our Heritage City development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Embed */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+              Explore the Location
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
+              Interactive map showing our prime location and surrounding landmarks
+            </p>
+          </div>
+
+          <div className="bg-card rounded-3xl p-8 shadow-luxury">
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14403.847739847937!2d76.3894!3d28.1037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d5f8b5b5b5b5b%3A0x1c2b3c4d5e6f7a8b!2sNeemrana%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Neemrana Location Map"
+              ></iframe>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground body-font">
+                <strong>Address:</strong> Neemrana, Alwar District, Rajasthan 301705
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Connectivity */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+              Excellent Connectivity
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
+              Well-connected to major cities and transportation hubs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {connectivity.map((connect, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-3xl p-8 shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
+              >
+                <div className="bg-primary p-4 rounded-xl w-fit mx-auto mb-6">
+                  <connect.icon className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold heading-font mb-4">{connect.title}</h3>
+                <div className="text-xl font-semibold text-primary mb-2">{connect.distance}</div>
+                <div className="text-lg text-secondary font-semibold mb-4">{connect.time}</div>
+                <p className="text-muted-foreground body-font">{connect.details}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Distance Chart */}
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury">
+            <h3 className="text-3xl font-bold text-center heading-font mb-8">Distance from Major Cities</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">122 km</div>
+                <div className="text-muted-foreground body-font">Delhi</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">85 km</div>
+                <div className="text-muted-foreground body-font">Gurgaon</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">150 km</div>
+                <div className="text-muted-foreground body-font">Jaipur</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">35 km</div>
+                <div className="text-muted-foreground body-font">Rewari</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nearby Landmarks */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+              Nearby Landmarks
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
+              Surrounded by heritage sites, industrial hubs, and tourist attractions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {landmarks.map((landmark, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-3xl p-8 shadow-luxury hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-xl font-bold heading-font">{landmark.name}</h3>
+                  <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                    {landmark.distance}
+                  </div>
+                </div>
+                <div className="text-secondary font-semibold mb-3">{landmark.type}</div>
+                <p className="text-muted-foreground body-font">{landmark.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Amenities */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+              Local Amenities
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
+              Complete ecosystem of essential services and facilities
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {amenities.map((amenity, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-3xl p-8 shadow-luxury text-center"
+              >
+                <div className="bg-primary p-4 rounded-xl w-fit mx-auto mb-6">
+                  <amenity.icon className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold heading-font mb-4">{amenity.title}</h3>
+                <ul className="text-left space-y-2">
+                  {amenity.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <div className="bg-primary p-0.5 rounded-full mt-2">
+                        <div className="w-1.5 h-1.5 bg-primary-foreground rounded-full"></div>
+                      </div>
+                      <span className="text-muted-foreground text-sm body-font">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Benefits */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+                Why This Location?
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold heading-font mb-2">Heritage Tourism Hub</h3>
+                    <p className="text-muted-foreground body-font">
+                      Located near famous Neemrana Fort Palace, ensuring constant tourist influx and cultural significance
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-secondary p-3 rounded-lg">
+                    <Building className="w-6 h-6 text-secondary-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold heading-font mb-2">Industrial Growth</h3>
+                    <p className="text-muted-foreground body-font">
+                      Proximity to Korean Industrial Zone ensures strong residential demand from professionals
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-gold p-3 rounded-lg">
+                    <Car className="w-6 h-6 text-gold-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold heading-font mb-2">Strategic Connectivity</h3>
+                    <p className="text-muted-foreground body-font">
+                      Part of Delhi NCR growth corridor with excellent highway connectivity
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8 shadow-luxury">
+                <h3 className="text-2xl font-bold heading-font mb-6 text-center">Location Advantages</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Delhi NCR Region</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Mountain Foothills</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Heritage Location</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Industrial Proximity</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Natural Beauty</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-semibold">Investment Potential</span>
+                    <span className="text-primary">✓</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h3 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+              Visit Our Location
+            </h3>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto body-font">
+              Experience the beauty and strategic advantages of our Neemrana location firsthand.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
+                Schedule Site Visit
+              </Button>
+              <Button variant="outline" size="lg">
+                Get Directions
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Location;

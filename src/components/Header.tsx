@@ -11,11 +11,11 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Gallery", href: "#gallery" },
+    { name: "About", href: "/about" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Amenities", href: "#amenities" },
-    { name: "Plans", href: "#plans" },
-    { name: "Location", href: "#location" },
+    { name: "Plans", href: "/plans" },
+    { name: "Location", href: "/location" },
     { name: "Contact", href: "/contact" },
   ];
 
