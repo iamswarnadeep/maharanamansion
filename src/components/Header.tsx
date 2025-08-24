@@ -10,13 +10,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
     { name: "About", href: "#about" },
     { name: "Gallery", href: "#gallery" },
     { name: "Amenities", href: "#amenities" },
     { name: "Plans", href: "#plans" },
     { name: "Location", href: "#location" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
