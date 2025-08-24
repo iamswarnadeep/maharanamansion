@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import VideoHero from "@/components/VideoHero";
+import VideoHeroSecond from "@/components/VideoHeroSecond";
 import About from "@/components/About";
 import Amenities from "@/components/Amenities";
 import Contact from "@/components/Contact";
@@ -14,6 +15,7 @@ const Index = () => {
       </section>
       <About />
       <Amenities />
+      <VideoHeroSecond />
       <Contact />
       <Footer />
     </div>

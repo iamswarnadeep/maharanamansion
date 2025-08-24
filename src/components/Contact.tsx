@@ -14,45 +14,48 @@ const Contact = () => {
     message: ""
   });
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   toast({
-  //     title: "Enquiry Submitted!",
-  //     description: "Thank you for your interest. Our team will contact you soon.",
-  //   });
-  //   setFormData({ name: "", phone: "", email: "", message: "" });
-  // };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    window.Email.send({
-      SecureToken: "YOUR_SECURE_TOKEN", // you’ll get this from smtpjs.com
-      To: "your-email@example.com",     // your receiving email
-      From: formData.email,             // sender email (user input)
-      Subject: `New Enquiry from ${formData.name}`,
-      Body: `
-      <h3>New Enquiry Details</h3>
-      <p><b>Name:</b> ${formData.name}</p>
-      <p><b>Phone:</b> ${formData.phone}</p>
-      <p><b>Email:</b> ${formData.email}</p>
-      <p><b>Message:</b> ${formData.message || "No message provided"}</p>
-    `
-    }).then((message: string) => {
-      if (message === "OK") {
+    try {
+      const res = await fetch("https://swarnadeep-email-server.vercel.app/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message,
+          domain: window.location.hostname
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
         toast({
           title: "Enquiry Submitted!",
           description: "Thank you for your interest. Our team will contact you soon.",
         });
         setFormData({ name: "", phone: "", email: "", message: "" });
       } else {
+        console.error("API Error:", data.error);
         toast({
           title: "Error",
-          description: "Something went wrong. Please try again later.",
+          description: data.error || "Something went wrong. Please try again later.",
           variant: "destructive",
         });
       }
-    });
+    } catch (error) {
+      console.error("Request Failed:", error);
+      toast({
+        title: "Error",
+        description: "Could not reach the server. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
