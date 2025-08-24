@@ -98,10 +98,9 @@ const Location = () => {
             <span className="font-semibold">Prime Location</span>
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-bold royal-heading heading-font mb-6">
-            Neemrana,
-            <span className="block text-gold">Rajasthan</span>
-          </h1>
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            Neemrana, Rajasthan
+          </div>
           
           <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
             Strategically located in the foothills of Aravali mountains with Delhi NCR connectivity
@@ -151,7 +150,7 @@ const Location = () => {
           <div className="bg-card rounded-3xl p-8 shadow-luxury">
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14403.847739847937!2d76.3894!3d28.1037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d5f8b5b5b5b5b%3A0x1c2b3c4d5e6f7a8b!2sNeemrana%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28183.52836939547!2d76.37663635798597!3d27.995700025759323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912ab23694fb62d%3A0x4dd08a8a1b9e5db0!2sMaharana%20Mansion!5e0!3m2!1sen!2sin!4v1756071051258!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -392,7 +391,7 @@ const Location = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Schedule Site Visit
               </Button>
-              <Button variant="outline" size="lg">
+              <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => window.open('https://maps.app.goo.gl/Yuj4Sfh9Zcd7XRjY9', '_blank')}>
                 Get Directions
               </Button>
             </div>

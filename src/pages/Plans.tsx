@@ -136,7 +136,7 @@ const Plans = () => {
         <Button variant="default" size="lg" className="flex-1">
           View Floor Plan
         </Button>
-        <Button variant="outline" size="lg" className="flex-1">
+        <Button className="flex-1 bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "/contact")}>
           Schedule Visit
         </Button>
       </div>
@@ -162,10 +162,9 @@ const Plans = () => {
             <span className="font-semibold">Floor Plans & Pricing</span>
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-bold royal-heading heading-font mb-6">
-            Choose Your
-            <span className="block text-gold">Royal Home</span>
-          </h1>
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            Choose Your Royal Home
+          </div>
           
           <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
             Explore thoughtfully designed floor plans across all three heritage phases
@@ -334,7 +333,7 @@ const Plans = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury text-center">
             <h3 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
@@ -347,7 +346,7 @@ const Plans = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Book Consultation
               </Button>
-              <Button variant="outline" size="lg">
+              <Button className="bg-transparent text-primary border-2 border-primary" size="lg">
                 Download Floor Plans
               </Button>
             </div>

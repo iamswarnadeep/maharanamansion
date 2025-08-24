@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Crown, MapPin, Building, Users, Award, Target } from "lucide-react";
 import neeamranaAerial from "@/assets/neemrana-aerial.jpg";
+import brochure from "@/assets/brochure.pdf";
 
 const About = () => {
   const principles = [
@@ -83,10 +84,9 @@ const About = () => {
             <span className="font-semibold">About Gennext Heritage City</span>
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-bold royal-heading heading-font mb-6">
-            A Timeless
-            <span className="block text-gold">Vision</span>
-          </h1>
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            A Timeless Vision
+          </div>
           
           <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
             Where heritage meets modern living in the heart of Rajasthan
@@ -295,7 +295,7 @@ const About = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Schedule a Visit
               </Button>
-              <Button variant="outline" size="lg">
+              <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => window.open(brochure, "_blank")}>
                 Download Brochure
               </Button>
             </div>

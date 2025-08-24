@@ -65,7 +65,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-[140px]" />
+              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-[140px]" onClick={() => window.location.href = "/"}/>
               <div>
                 {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
               <span className="text-sm gold-accent body-font">MANSION</span> */}
@@ -109,7 +109,7 @@ const Header = () => {
           <div
             className={cn(
               "lg:hidden transition-all duration-300 ease-in-out overflow-hidden",
-              isMenuOpen ? "max-h-96 pb-6" : "max-h-0"
+              isMenuOpen ? "max-h-full pb-6" : "max-h-0"
             )}
           >
             <nav className="flex flex-col space-y-4 pt-4">
@@ -124,7 +124,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
-                <Button variant="outline" size="sm" onClick={() => window.open(brochure, "_blank")}>
+                <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
                   Download Brochure
                 </Button>
                 <Button variant="royal" size="sm" onClick={() => window.location.href = "#contact"}>

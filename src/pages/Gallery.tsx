@@ -1,160 +1,200 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Camera, Video, Image as ImageIcon, Building } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Camera, Video, Image as ImageIcon, Building, ChevronLeft, ChevronRight, X } from "lucide-react";
+
 import rajputanaGallery from "@/assets/rajputana-gallery.jpg";
 import heroBuildingImage from "@/assets/hero-building.jpg";
-import slider1 from "@/assets/slider-1.jpg";
-import slider2 from "@/assets/slider-2.jpg";
-import slider3 from "@/assets/slider-3.jpg";
+// import slider1 from "@/assets/slider-1.jpg";
+// import slider2 from "@/assets/slider-2.jpg";
+// import slider3 from "@/assets/slider-3.jpg";
+import Image1 from "@/assets/gallery/Image (1).jpg";
+import Image2 from "@/assets/gallery/Image (2).jpg";
+import Image3 from "@/assets/gallery/Image (3).jpg";
+import Image4 from "@/assets/gallery/Image (4).jpg";
+import Image5 from "@/assets/gallery/Image (5).jpg";
+import Image6 from "@/assets/gallery/Image (6).jpg";
+import Image7 from "@/assets/gallery/Image (7).jpg";
+import Image8 from "@/assets/gallery/Image (8).jpg";
+import Image9 from "@/assets/gallery/Image (9).jpg";
+import Image10 from "@/assets/gallery/Image (10).jpg";
+import Image11 from "@/assets/gallery/Image (11).jpg";
+import Image12 from "@/assets/gallery/Image (12).jpg";
+
+import brochure from "@/assets/brochure.pdf";
 
 const Gallery = () => {
-  const architectureImages = [
-    {
-      src: rajputanaGallery,
-      title: "Rajputana Palace Architecture",
-      description: "Traditional Rajasthani architectural elements with intricate carvings"
-    },
-    {
-      src: heroBuildingImage,
-      title: "Heritage City Overview",
-      description: "Panoramic view of the entire Heritage City development"
-    },
-    {
-      src: slider1,
-      title: "Royal Courtyards",
-      description: "Magnificent courtyards inspired by royal palaces"
-    },
-    {
-      src: slider2,
-      title: "Traditional Facades",
-      description: "Beautifully crafted facades with heritage motifs"
-    },
-    {
-      src: slider3,
-      title: "Landscape Integration",
-      description: "Seamless blend with Aravali mountain landscape"
-    }
+  // Use simple arrays of image sources (no titles/descriptions anywhere)
+  const architectureImages: string[] = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+    Image10,
+    Image11,
+    Image12
   ];
 
-  const amenityImages = [
-    {
-      src: heroBuildingImage,
-      title: "Club House",
-      description: "Premium clubhouse with modern amenities"
-    },
-    {
-      src: slider1,
-      title: "Swimming Pool",
-      description: "Resort-style swimming pool with relaxation area"
-    },
-    {
-      src: slider2,
-      title: "Fitness Center",
-      description: "State-of-the-art fitness and wellness center"
-    },
-    {
-      src: slider3,
-      title: "Gardens & Parks",
-      description: "Landscaped gardens and recreational parks"
-    }
+  const amenityImages: string[] = [
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image9,
+    Image10,
+    Image11,
+    Image12
   ];
 
-  const locationImages = [
-    {
-      src: rajputanaGallery,
-      title: "Neemrana Fort View",
-      description: "Stunning views of the historic Neemrana Fort"
-    },
-    {
-      src: heroBuildingImage,
-      title: "Aravali Mountains",
-      description: "Breathtaking Aravali mountain ranges"
-    },
-    {
-      src: slider1,
-      title: "Natural Landscape",
-      description: "Pristine natural environment surrounding the project"
-    },
-    {
-      src: slider2,
-      title: "Connectivity",
-      description: "Strategic location with excellent connectivity"
-    }
+  const locationImages: string[] = [
+    Image9,
+    Image10,
+    Image11,
+    Image12,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image1,
+    Image2,
+    Image3,
+    Image4    
   ];
 
-  const ImageGrid = ({ images }: { images: typeof architectureImages }) => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className="bg-card rounded-2xl overflow-hidden shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-        >
-          <div className="relative h-64 overflow-hidden">
-            <img
-              src={image.src}
-              alt={image.title}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-              <div className="p-4 text-white">
-                <h4 className="font-bold text-lg heading-font">{image.title}</h4>
-                <p className="text-sm text-white/80 body-font">{image.description}</p>
-              </div>
+  // Lightbox-enabled ImageGrid
+  const ImageGrid = ({ images }: { images: string[] }) => {
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+    const showPrev = () => {
+      if (selectedIndex === null) return;
+      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
+    };
+
+    const showNext = () => {
+      if (selectedIndex === null) return;
+      setSelectedIndex((selectedIndex + 1) % images.length);
+    };
+
+    return (
+      <>
+        {/* Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="cursor-pointer rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform"
+              onClick={() => setSelectedIndex(i)}
+            >
+              <img src={src} alt={`Gallery ${i}`} className="w-full h-64 object-cover" />
             </div>
-          </div>
-          <div className="p-6">
-            <h4 className="font-bold text-lg heading-font mb-2">{image.title}</h4>
-            <p className="text-muted-foreground body-font">{image.description}</p>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
-  );
+
+        {/* Lightbox */}
+        <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
+          <DialogContent className="max-w-6xl p-4 bg-background rounded-xl [&>button]:hidden">
+            {selectedIndex !== null && (
+              <div className="relative">
+                {/* Close */}
+                <button
+                  className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-2 z-10"
+                  onClick={() => setSelectedIndex(null)}
+                  aria-label="Close"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+
+                {/* Main image + nav */}
+                <div className="flex items-center justify-center">
+                  <button
+                    onClick={showPrev}
+                    className="absolute left-2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+
+                  <img
+                    src={images[selectedIndex]}
+                    alt={`Large ${selectedIndex}`}
+                    className="max-h-[70vh] mx-auto rounded-xl object-contain"
+                  />
+
+                  <button
+                    onClick={showNext}
+                    className="absolute right-2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Thumbnails */}
+                <div className="flex gap-2 mt-4 overflow-x-auto p-2">
+                  {images.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`Thumb ${i}`}
+                      className={`h-20 w-28 object-cover rounded-lg cursor-pointer transition-all ${
+                        i === selectedIndex ? "ring-4 ring-primary" : "opacity-80 hover:opacity-100"
+                      }`}
+                      onClick={() => setSelectedIndex(i)}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
+      </>
+    );
+  };
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${rajputanaGallery})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
         </div>
-        
+
         <div className="relative z-10 text-center text-white px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
             <Camera className="w-5 h-5 text-gold" />
             <span className="font-semibold">Visual Gallery</span>
           </div>
-          
-          <h1 className="text-5xl lg:text-7xl font-bold royal-heading heading-font mb-6">
-            Heritage City
-            <span className="block text-gold">Gallery</span>
-          </h1>
-          
+
+          <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
+            Heritage City Gallery
+          </div>
+
           <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
             Explore the visual journey of architectural excellence and natural beauty
           </p>
         </div>
       </section>
 
-      {/* Gallery Tabs */}
+      {/* Gallery Tabs (only images inside tabs; no extra content) */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
-              Visual Experience
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
-              Discover the beauty and grandeur of Gennext Heritage City through our comprehensive gallery
-            </p>
-          </div>
-
           <Tabs defaultValue="architecture" className="w-full">
             <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-12 h-14">
               <TabsTrigger value="architecture" className="flex items-center gap-2 text-sm">
@@ -175,55 +215,21 @@ const Gallery = () => {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="architecture" className="space-y-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold royal-heading heading-font mb-4">
-                  Architectural Excellence
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto body-font">
-                  Experience the grandeur of Rajputana architecture blended with modern design principles. 
-                  Each structure tells a story of heritage and craftsmanship.
-                </p>
-              </div>
+            <TabsContent value="architecture">
               <ImageGrid images={architectureImages} />
             </TabsContent>
 
-            <TabsContent value="amenities" className="space-y-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold royal-heading heading-font mb-4">
-                  World-Class Amenities
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto body-font">
-                  Discover the premium amenities designed to enhance your lifestyle. 
-                  From recreational facilities to wellness centers, everything is crafted for royal living.
-                </p>
-              </div>
+            <TabsContent value="amenities">
               <ImageGrid images={amenityImages} />
             </TabsContent>
 
-            <TabsContent value="location" className="space-y-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold royal-heading heading-font mb-4">
-                  Prime Location Benefits
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto body-font">
-                  Nestled in the foothills of Neemrana Fort and Aravali mountains, 
-                  our location offers unparalleled natural beauty and strategic connectivity.
-                </p>
-              </div>
+            <TabsContent value="location">
               <ImageGrid images={locationImages} />
             </TabsContent>
 
-            <TabsContent value="virtual" className="space-y-8">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold royal-heading heading-font mb-4">
-                  Virtual Tour Experience
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto body-font">
-                  Take an immersive virtual tour of Gennext Heritage City from the comfort of your home.
-                </p>
-              </div>
-              
+            {/* If you have virtual tour images, add them here; else you can keep your "Coming Soon" cards */}
+            <TabsContent value="virtual">
+              {/* Example: keep your existing "Coming Soon" cards, or replace with images: */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="bg-card rounded-3xl p-8 shadow-luxury text-center">
                   <div className="bg-primary p-6 rounded-xl w-fit mx-auto mb-6">
@@ -234,10 +240,10 @@ const Gallery = () => {
                     Experience a complete 360-degree virtual walkthrough of our sample apartments and common areas.
                   </p>
                   <Button variant="default" size="lg">
-                    Start Virtual Tour
+                    Coming Soon
                   </Button>
                 </div>
-                
+
                 <div className="bg-card rounded-3xl p-8 shadow-luxury text-center">
                   <div className="bg-secondary p-6 rounded-xl w-fit mx-auto mb-6">
                     <Building className="w-12 h-12 text-secondary-foreground" />
@@ -246,7 +252,11 @@ const Gallery = () => {
                   <p className="text-muted-foreground body-font mb-6">
                     Explore detailed, interactive floor plans for all apartment configurations and layouts.
                   </p>
-                  <Button variant="outline" size="lg">
+                  <Button
+                    className="bg-transparent text-primary border-2 border-primary"
+                    size="lg"
+                    onClick={() => window.open(brochure, "_blank")}
+                  >
                     View Floor Plans
                   </Button>
                 </div>
@@ -257,7 +267,7 @@ const Gallery = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -283,7 +293,7 @@ const Gallery = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
@@ -293,10 +303,14 @@ const Gallery = () => {
               See the beauty of Heritage City in person. Book your site visit today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
+              <Button variant="default" size="lg" onClick={() => (window.location.href = "/contact")}>
                 Book Site Visit
               </Button>
-              <Button variant="outline" size="lg">
+              <Button
+                className="bg-transparent text-primary border-2 border-primary"
+                size="lg"
+                onClick={() => window.open(brochure, "_blank")}
+              >
                 Download Brochure
               </Button>
             </div>
