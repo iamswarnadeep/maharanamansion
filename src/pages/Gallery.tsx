@@ -8,18 +8,18 @@ import { Camera, Video, Image as ImageIcon, Building, ChevronLeft, ChevronRight,
 import rajputanaGallery from "@/assets/rajputana-gallery.jpg";
 import brochure from "@/assets/brochure.pdf";
 
-import Image1 from "@/assets/gallery/Image1.jpg";
-import Image2 from "@/assets/gallery/Image2.jpg";
-import Image3 from "@/assets/gallery/Image3.jpg";
-import Image4 from "@/assets/gallery/Image4.jpg";
-import Image5 from "@/assets/gallery/Image5.jpg";
-import Image6 from "@/assets/gallery/Image6.jpg";
-import Image7 from "@/assets/gallery/Image7.jpg";
-import Image8 from "@/assets/gallery/Image8.jpg";
-import Image9 from "@/assets/gallery/Image9.jpg";
-import Image10 from "@/assets/gallery/Image10.jpg";
-import Image11 from "@/assets/gallery/Image11.jpg";
-import Image12 from "@/assets/gallery/Image12.jpg";
+const Image1 = "https://i.postimg.cc/HxjWLSKx/Image1.jpg";
+const Image2 = "https://i.postimg.cc/h4kmHxzx/Image2.jpg";
+const Image3 = "https://i.postimg.cc/v8g9qXBb/Image3.jpg";
+const Image4 = "https://i.postimg.cc/Wzk2Gdsc/Image4.jpg";
+const Image5 = "https://i.postimg.cc/zBMzHCZk/Image5.jpg";
+const Image6 = "https://i.postimg.cc/0NyKp0Fg/Image6.jpg";
+const Image7 = "https://i.postimg.cc/Xv5S1TT9/Image7.jpg";
+const Image8 = "https://i.postimg.cc/mgwFz5dN/Image8.jpg";
+const Image9 = "https://i.postimg.cc/RVwt9FKY/Image9.jpg";
+const Image10 = "https://i.postimg.cc/W1jk4v71/Image10.jpg";
+const Image11 = "https://i.postimg.cc/XJZZP7nQ/Image11.jpg";
+const Image12 = "https://i.postimg.cc/1z7nMN18/Image12.jpg";
 
 const Gallery = () => {
   // Use simple arrays of image sources (no titles/descriptions anywhere)
