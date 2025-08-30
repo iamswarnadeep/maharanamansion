@@ -1,66 +1,26 @@
-import { Crown, Dumbbell, Waves, TreePine, Car, Shield, Zap, Users, Home, Compass } from "lucide-react";
+import { Crown, Home, Plane, Landmark, ShoppingBasket, Wind, Waves, HeartPulse } from "lucide-react";
 
 const Amenities = () => {
   const amenities = [
     {
-      icon: TreePine,
-      title: "Terrace Garden",
-      description: "Beautiful rooftop gardens with scenic views"
-    },
-    {
-      icon: Compass,
-      title: "Jogging Track",
-      description: "Dedicated track for morning and evening walks"
-    },
-    {
-      icon: Shield,
-      title: "Gated Complex",
-      description: "Secure gated community with 24x7 surveillance"
-    },
-    {
       icon: Home,
-      title: "Shopping Complex",
-      description: "Convenient shopping facilities within the premises"
+      title: "Heritage Attractions",
+      description: "Experience timeless charm with Neemrana Fort Palace and the 17th-century Queen’s Baoli (Stepwell) just minutes away, offering a blend of history, culture, and grandeur right at your doorstep"
     },
     {
-      icon: Users,
-      title: "Play Area",
-      description: "Safe and fun playground for children"
+      icon: Plane,
+      title: "Seamless Connectivity",
+      description: "Stay connected with the upcoming airport and excellent road access, while being just 3 km from Japanese & Korean Industrial Zones — making travel and global business opportunities easily accessible"
     },
     {
-      icon: Compass,
-      title: "Vastu Friendly",
-      description: "Designed according to traditional Vastu principles"
+      icon: Landmark,
+      title: "Economic & Educational Hub",
+      description: "Located amidst major industries, MNCs, and universities, with aeronautical and research centers nearby — creating a perfect balance of career, learning, and innovation close to home"
     },
     {
-      icon: Shield,
-      title: "24x7 Security",
-      description: "Round-the-clock security with trained personnel"
-    },
-    {
-      icon: Zap,
-      title: "Power Backup",
-      description: "Uninterrupted power supply with backup generators"
-    },
-    {
-      icon: Dumbbell,
-      title: "Fitness Center",
-      description: "Modern gymnasium with latest equipment"
-    },
-    {
-      icon: Waves,
-      title: "Swimming Pool",
-      description: "Refreshing pool area for relaxation and fitness"
-    },
-    {
-      icon: Car,
-      title: "Reserved Parking",
-      description: "Dedicated parking spaces for all residents"
-    },
-    {
-      icon: Users,
-      title: "Community Hall",
-      description: "Spacious hall for events and gatherings"
+      icon: ShoppingBasket,
+      title: "Everyday Essentials",
+      description: "Enjoy unmatched convenience with banks, ATMs, local markets, healthcare, and reputed schools just minutes away — everything you need for daily life within easy reach"
     }
   ];
 
@@ -71,17 +31,15 @@ const Amenities = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-6 py-2 mb-6">
             <Crown className="w-5 h-5 text-gold" />
-            <span className="text-gold font-semibold">Luxury Amenities</span>
+            <span className="text-gold font-semibold">Easy Commute</span>
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
-            Values of Smart Living in
-            <span className="block text-gold">Maharana Mansion</span>
+            Location Advantages & Attractions <span className="block text-gold">of Maharana Mansion Neemrana</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            The legendary concept of affordable housing with stunning scenic beauty 
-            all around the property. Experience premium amenities designed for your comfort.
+            Maharana Mansion combines modern living with heritage charm — offering unmatched convenience, cultural richness, and investment potential in Neemrana
           </p>
         </div>
 
@@ -108,24 +66,26 @@ const Amenities = () => {
         {/* Feature Highlight */}
         <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center">
           <h3 className="text-3xl lg:text-4xl font-bold text-royal-foreground mb-6">
-            Smart Living Redefined
+            Elevating everyday living with the gift of nature
           </h3>
-          <p className="text-xl text-royal-foreground/90 mb-8 max-w-2xl mx-auto">
-            With every step in Maharana Mansion, you will be amazed by futuristic 
-            innovative approaches that enhance your lifestyle.
+          <p className="text-xl text-royal-foreground/90 mb-8 max-w-4xl mx-auto">
+            Surrounded by fresh, unpolluted air and abundant pure ground water, Maharana Mansion offers residents a healthier, more balanced lifestyle — where modern comfort meets natural well-being, ensuring harmony, vitality, and peace every day
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-royal-foreground">
-            <div>
-              <div className="text-4xl font-bold text-gold mb-2">100%</div>
-              <div className="text-royal-foreground/80">Vastu Compliant</div>
+            <div className="flex flex-col items-center">
+              {/* <div className="text-4xl font-bold text-gold mb-2">100%</div> */}
+              <Wind className="w-10 h-10 text-gold" />
+              <div className="text-royal-foreground/80">Good Quality <br/>Fresh Air</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-gold mb-2">24/7</div>
-              <div className="text-royal-foreground/80">Security & Power</div>
+            <div className="flex flex-col items-center">
+              {/* <div className="text-4xl font-bold text-gold mb-2">24/7</div> */}
+              <Waves className="w-10 h-10 text-gold" />
+              <div className="text-royal-foreground/80">Pure & Refreshing <br/> Ground Water</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-gold mb-2">80%</div>
-              <div className="text-royal-foreground/80">Green Spaces</div>
+            <div className="flex flex-col items-center">
+              {/* <div className="text-4xl font-bold text-gold mb-2">80%</div> */}
+              <HeartPulse className="w-10 h-10 text-gold" />
+              <div className="text-royal-foreground/80">A Healthier Lifestyle <br/>Naturally Yours</div>
             </div>
           </div>
         </div>

@@ -6,32 +6,32 @@ const About = () => {
     {
       icon: Crown,
       title: "Royal Heritage",
-      description: "Inspired by Rajasthani palace architecture with modern luxury amenities"
+      description: "Inspired by Rajputana palatial architecture, offering a regal lifestyle enhanced with modern amenities"
     },
     {
       icon: Home,
-      title: "Premium Homes",
-      description: "Spacious 2 & 3 BHK apartments designed for comfortable royal living"
+      title: "Premium Executive Floors",
+      description: "Exclusively designed 1 & 2 BHK executive floors crafted for comfort, elegance, and everyday royal living"
     },
     {
       icon: TreePine,
-      title: "Lush Greenery",
-      description: "Surrounded by landscaped gardens and open green spaces"
+      title: "Green Retreat & Community",
+      description: "Landscaped open spaces near the Aravallis and Neemrana Fort, with parks and a durbar hall — crafted for all ages to foster togetherness"
     },
     {
       icon: Shield,
-      title: "Gated Security",
-      description: "24/7 security with modern surveillance and controlled access"
-    },
-    {
-      icon: Sparkles,
-      title: "Smart Living",
-      description: "Modern amenities including clubhouse, gym, and recreational facilities"
-    },
-    {
-      icon: Users,
-      title: "Community",
-      description: "Designed for families seeking quality lifestyle and community"
+      title: "Smart & Secure Living",
+      description: "24/7 gated security with advanced surveillance, along with modern community features including community hall and recreation facilities"
+    // },
+    // {
+    //   icon: Sparkles,
+    //   title: "Smart Living",
+    //   description: "Modern amenities including clubhouse, gym, and recreational facilities"
+    // },
+    // {
+    //   icon: Users,
+    //   title: "Community",
+    //   description: "Designed for families seeking quality lifestyle and community"
     }
   ];
 
@@ -47,13 +47,11 @@ const About = () => {
           
           <h2 className="text-4xl lg:text-6xl font-bold royal-heading heading-font mb-6">
             Where Heritage Meets
-            <span className="block text-gold">Modern Luxury</span>
+            <span className="block text-gold"> Modern Living</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed body-font">
-            Maharana Mansion brings you the legendary concept of affordable luxury housing. 
-            Experience the perfect blend of royal heritage and contemporary living in this 
-            meticulously planned residential project.
+            Maharana Mansion brings you the timeless charm of royal heritage combined with the comfort of contemporary design. Experience affordable, thoughtfully planned homes that blend tradition with modern conveniences in a vibrant community setting.
           </p>
         </div>
 
@@ -78,7 +76,7 @@ const About = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
