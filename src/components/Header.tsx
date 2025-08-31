@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Crown, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -7,6 +8,7 @@ import mainlogo from "@/assets/maharana-logo.png";
 import brochure from "@/assets/brochure.pdf";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -65,7 +67,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-[140px]" onClick={() => window.location.href = "/"}/>
+              <img src={mainlogo} alt="Maharana Mansion" className="h-[80px] w-[140px] cursor-pointer" onClick={() => navigate("/")}/>
               <div>
                 {/* <h1 className="text-xl font-bold royal-heading heading-font">Maharana</h1>
               <span className="text-sm gold-accent body-font">MANSION</span> */}
@@ -75,13 +77,13 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-foreground hover:text-primary transition-colors font-medium body-font"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -114,14 +116,14 @@ const Header = () => {
           >
             <nav className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
                 <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
