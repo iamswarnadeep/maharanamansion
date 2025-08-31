@@ -69,7 +69,7 @@ const PricingSection = () => {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className={`text-2xl font-bold ${plan.textColor} heading-font`}>{plan.type}</h3>
+                      <h3 className={`text-2xl font-bold ${plan.textColor} font-sans`}>{plan.type}</h3>
                       <span className="text-muted-foreground">{plan.area}</span>
                     </div>
                   </div>
@@ -77,7 +77,7 @@ const PricingSection = () => {
                 
                 <div className="mb-6">
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-3xl font-bold heading-font">{plan.price}</span>
+                    <span className="text-3xl font-bold body-font">{plan.price}</span>
                     {/* <span className="text-lg text-muted-foreground line-through">{plan.originalPrice}</span> */}
                   </div>
                   {/* <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
@@ -86,7 +86,7 @@ const PricingSection = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="font-bold text-lg mb-4 heading-font">Accomodation:</h4>
+                  <h4 className="font-bold text-lg mb-4 body-font">Accomodation:</h4>
                   <ul className="space-y-2">
                     {plan.features.map((feature: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-3">
