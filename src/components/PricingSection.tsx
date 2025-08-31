@@ -100,10 +100,10 @@ const PricingSection = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button variant="default" size="lg" className="flex-1">
+                  <Button variant="default" size="lg">
                     View Floor Plan
                   </Button>
-                  <Button className="flex-1 bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "#contact")}>
+                  <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "#contact")}>
                     Book Now
                   </Button>
                 </div>
