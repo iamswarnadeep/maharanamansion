@@ -30,7 +30,7 @@ const About = () => {
       theme: "Rajputana Architecture",
       dedicatedTo: "Maharana Pratap Singh Sisodia",
       offering: "Affordable Housing",
-      units: ["1 BHK (~500+ sq.ft.)", "2 BHK (~750+ sq.ft.)"],
+      units: ["1 BHK (~404+ sq.ft.)", "2 BHK (~635+ sq.ft.)"],
       configuration: "G+4 and G+9 towers",
       highlights: [
         "Palatial Rajputana-inspired architecture",

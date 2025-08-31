@@ -9,29 +9,28 @@ const Plans = () => {
   const maharanaPlans = [
     {
       type: "1 BHK",
-      area: "500+ sq.ft.",
-      configuration: "G+4 & G+9",
-      price: "Starting ₹25 Lakhs",
+      area: "404+ sq.ft.",
+      configuration: "G+2",
+      price: "Starting ₹14.50 Lacs",
       features: [
-        "Spacious living room",
-        "Modern kitchen with utilities",
-        "Master bedroom with attached bathroom",
-        "Balcony with Aravali views",
-        "Dedicated parking space"
+        "Large living and dining area",
+        "One spacious bedroom",
+        "One bathroom",
+        "Beautiful kitchen",
+        "One balcony with scenic views",
       ]
     },
     {
       type: "2 BHK",
-      area: "750+ sq.ft.", 
-      configuration: "G+4 & G+9",
-      price: "Starting ₹35 Lakhs",
+      area: "635+ sq.ft.", 
+      configuration: "G+2",
+      price: "Starting ₹19.50 Lacs",
       features: [
         "Large living and dining area",
         "Two spacious bedrooms",
         "Two bathrooms (one attached)",
-        "Modern modular kitchen",
-        "Two balconies with scenic views",
-        "Dedicated parking space"
+        "Beautiful kitchen",
+        "One balcony with scenic views",
       ]
     }
   ];
@@ -192,7 +191,7 @@ const Plans = () => {
               </div>
               <h3 className="text-2xl font-bold text-primary heading-font mb-4">Phase I: Maharana Mansion</h3>
               <p className="text-muted-foreground body-font mb-4">Rajputana Architecture - Affordable Housing</p>
-              <div className="text-lg font-semibold">₹25L - ₹40L</div>
+              <div className="text-lg font-semibold">₹14.50L - ₹19.50L</div>
             </div>
 
             <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-3xl p-8 shadow-luxury text-center">

@@ -5,15 +5,15 @@ const PricingSection = () => {
   const pricingPlans = [
     {
       type: "1 BHK",
-      area: "500+ sq.ft.",
-      price: "₹14.5 Lakhs",
+      area: "404+ sq.ft.",
+      price: "₹14.50 Lacs",
       originalPrice: "₹16 Lakhs",
       features: [
-        "Spacious living room",
-        "Modern kitchen with utilities", 
-        "Master bedroom with attached bathroom",
-        "Balcony with Aravali views",
-        "Dedicated parking space"
+        "Large living and dining area",
+        "One spacious bedroom",
+        "One bathroom",
+        "Beautiful kitchen",
+        "One balcony with scenic views",
       ],
       icon: Home,
       gradient: "from-primary/10 to-primary/5",
@@ -22,16 +22,15 @@ const PricingSection = () => {
     },
     {
       type: "2 BHK", 
-      area: "750+ sq.ft.",
-      price: "₹19.5 Lakhs",
+      area: "635+ sq.ft.",
+      price: "₹19.50 Lacs",
       originalPrice: "₹22 Lakhs",
       features: [
         "Large living and dining area",
         "Two spacious bedrooms",
         "Two bathrooms (one attached)",
-        "Modern modular kitchen",
-        "Two balconies with scenic views",
-        "Dedicated parking space"
+        "Beautiful kitchen",
+        "One balcony with scenic views",
       ],
       icon: Crown,
       gradient: "from-secondary/10 to-secondary/5", 
@@ -41,12 +40,12 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
             <Ruler className="w-5 h-5 text-primary" />
-            <span className="font-semibold text-primary">Special Launch Pricing</span>
+            <span className="font-semibold text-primary">Special Pricing</span>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
@@ -54,7 +53,7 @@ const PricingSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-font">
-            Experience royal living at unbeatable prices. Limited time launch offers on our Phase I - Rajputana inspired homes.
+            Experience royal living at unbeatable prices. Best offers on our Phase I - Rajputana inspired homes.
           </p>
         </div>
 
@@ -79,15 +78,15 @@ const PricingSection = () => {
                 <div className="mb-6">
                   <div className="flex items-baseline gap-3 mb-2">
                     <span className="text-3xl font-bold heading-font">{plan.price}</span>
-                    <span className="text-lg text-muted-foreground line-through">{plan.originalPrice}</span>
+                    {/* <span className="text-lg text-muted-foreground line-through">{plan.originalPrice}</span> */}
                   </div>
-                  <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                  {/* <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
                     Launch Offer
-                  </span>
+                  </span> */}
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="font-bold text-lg mb-4 heading-font">Key Features:</h4>
+                  <h4 className="font-bold text-lg mb-4 heading-font">Accomodation:</h4>
                   <ul className="space-y-2">
                     {plan.features.map((feature: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -104,7 +103,7 @@ const PricingSection = () => {
                   <Button variant="default" size="lg" className="flex-1">
                     View Floor Plan
                   </Button>
-                  <Button className="flex-1 bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white" size="lg" onClick={() => (window.location.href = "/contact")}>
+                  <Button className="flex-1 bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "#contact")}>
                     Book Now
                   </Button>
                 </div>
@@ -116,22 +115,22 @@ const PricingSection = () => {
         {/* Additional Benefits */}
         <div className="text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-            <div className="flex items-center justify-center gap-3 bg-card rounded-xl p-4">
+            <div className="flex items-center justify-center gap-3 bg-card border border-black border-solid rounded-xl p-4">
               <Users className="w-5 h-5 text-primary" />
               <span className="font-semibold">No Hidden Charges</span>
             </div>
-            <div className="flex items-center justify-center gap-3 bg-card rounded-xl p-4">
-              <Home className="w-5 h-5 text-secondary" />
+            <div className="flex items-center justify-center gap-3 bg-card border border-black border-solid rounded-xl p-4">
+              <Home className="w-5 h-5 text-primary" />
               <span className="font-semibold">Ready to Move</span>
             </div>
-            <div className="flex items-center justify-center gap-3 bg-card rounded-xl p-4">
-              <Crown className="w-5 h-5 text-gold" />
+            <div className="flex items-center justify-center gap-3 bg-card border border-black border-solid rounded-xl p-4">
+              <Crown className="w-5 h-5 text-primary" />
               <span className="font-semibold">Heritage Architecture</span>
             </div>
           </div>
           
           <p className="text-sm text-muted-foreground">
-            *Prices subject to change. Terms and conditions apply.
+            *Loan facility available upto 90%. T&C apply.
           </p>
         </div>
       </div>

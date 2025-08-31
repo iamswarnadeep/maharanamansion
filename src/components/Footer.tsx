@@ -1,20 +1,22 @@
+import { Link, useNavigate } from "react-router-dom";
 import { Crown, Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
 import mainlogo from "@/assets/maharana-logo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Amenities", href: "#amenities" },
-    { name: "Floor Plans", href: "#plans" },
-    { name: "Location", href: "#location" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Plans", href: "/plans" },
+    { name: "Location", href: "/location" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const services = [
-    "2 BHK Apartments",
-    "3 BHK Apartments", 
+    "1 BHK Apartments",
+    "2 BHK Apartments", 
     "Site Visit Booking",
     "Home Loan Assistance",
     "Interior Design",
@@ -60,12 +62,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-royal-foreground/80 hover:text-gold transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,7 +79,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-royal-foreground/80">{service}</span>
+                  <span className="text-royal-foreground/80 cursor-pointer" onClick={() => navigate("/contact")}>{service}</span>
                 </li>
               ))}
             </ul>
@@ -97,8 +99,8 @@ const Footer = () => {
               
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-gold mt-1" />
-                <div onClick={() => window.location.href = "mailto:contact@maharanamansion.com"} style={{ cursor: 'pointer' }}>
-                  <p className="text-royal-foreground/80">contact@maharanamansion.com</p>
+                <div onClick={() => window.location.href = "mailto:info@maharanamansion.com"} style={{ cursor: 'pointer' }}>
+                  <p className="text-royal-foreground/80">info@maharanamansion.com</p>
                 </div>
               </div>
               
@@ -124,7 +126,7 @@ const Footer = () => {
             <div className="flex items-center gap-1 text-sm text-royal-foreground/80">
               <span>Developed by</span>
               <Heart className="w-4 h-4 text-gold mx-1" />
-              <span className="text-gold">Swarnadeep</span>
+              <span className="text-gold"><a href="https://swarnadeep.in">Swarnadeep</a></span>
             </div>
           </div>
         </div>
