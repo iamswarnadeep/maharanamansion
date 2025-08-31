@@ -3,6 +3,7 @@ import VideoHero from "@/components/VideoHero";
 import VideoHeroSecond from "@/components/VideoHeroSecond";
 import About from "@/components/About";
 import Amenities from "@/components/Amenities";
+import PricingSection from "@/components/PricingSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <About />
       <Amenities />
       <VideoHeroSecond />
+      <PricingSection />
       <Contact />
       <Footer />
     </div>
