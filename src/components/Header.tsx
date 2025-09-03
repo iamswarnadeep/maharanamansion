@@ -5,7 +5,7 @@ import { Menu, X, Crown, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 import mainlogo from "@/assets/maharana-logo.png";
-import brochure from "@/assets/brochure.pdf";
+import brochure from "@/assets/portfolio.pdf";
 
 const Header = () => {
   const navigate = useNavigate();

@@ -113,7 +113,7 @@ const Location = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8">
-              50 Acres of Prime Land
+              30 acres of Prime Land
             </h2>
             
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury border border-primary/20 mb-16">
@@ -122,7 +122,7 @@ const Location = () => {
                 <h3 className="text-3xl font-bold text-primary heading-font">Strategic Acquisition</h3>
               </div>
               <p className="text-2xl font-bold text-foreground heading-font leading-relaxed">
-                Gennext has acquired <span className="text-primary">50 acres of prime land</span> under the foothills of 
+                Gennext has acquired <span className="text-primary">30 acres of prime land</span> under the foothills of 
                 <span className="text-secondary"> Neemrana Fort and the Aravali mountain range</span>
               </p>
             </div>
@@ -163,7 +163,7 @@ const Location = () => {
             
             <div className="mt-6 text-center">
               <p className="text-muted-foreground body-font">
-                <strong>Address:</strong> Neemrana, Alwar District, Rajasthan 301705
+                <strong>Address:</strong> Neemrana, Alwar District, NCR 301705
               </p>
             </div>
           </div>

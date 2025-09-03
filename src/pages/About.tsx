@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Crown, MapPin, Building, Users, Award, Target } from "lucide-react";
 import neeamranaAerial from "@/assets/neemrana-aerial.jpg";
-import brochure from "@/assets/brochure.pdf";
+import brochure from "@/assets/portfolio.pdf";
 
 const About = () => {
   const principles = [
@@ -31,7 +31,7 @@ const About = () => {
       dedicatedTo: "Maharana Pratap Singh Sisodia",
       offering: "Affordable Housing",
       units: ["1 BHK (~404+ sq.ft.)", "2 BHK (~635+ sq.ft.)"],
-      configuration: "G+4 and G+9 towers",
+      configuration: "G+2",
       highlights: [
         "Palatial Rajputana-inspired architecture",
         "Scenic views of Aravali hills", 
@@ -115,7 +115,7 @@ const About = () => {
                 <h3 className="text-3xl font-bold text-primary heading-font">Prime Location</h3>
               </div>
               <p className="text-2xl font-bold text-foreground heading-font leading-relaxed">
-                Gennext has acquired <span className="text-primary">50 acres of prime land</span> under the foothills of 
+                Gennext has acquired <span className="text-primary">30 acres of prime land</span> under the foothills of 
                 <span className="text-secondary"> Neemrana Fort and the Aravali mountain range</span>
               </p>
             </div>

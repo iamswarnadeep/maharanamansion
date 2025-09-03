@@ -5,7 +5,7 @@ const Amenities = () => {
     {
       icon: Home,
       title: "Heritage Attractions",
-      description: "Experience timeless charm with Neemrana Fort Palace and the 17th-century Queen’s Baoli (Stepwell) just minutes away, offering a blend of history, culture, and grandeur right at your doorstep"
+      description: "Experience timeless charm with Neemrana Fort Palace and the 17th-century Queen’s Baori (Stepwell) just minutes away, offering a blend of history, culture, and grandeur right at your doorstep"
     },
     {
       icon: Plane,

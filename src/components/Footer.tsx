@@ -108,7 +108,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-gold mt-1" />
                 <div>
                   <p className="text-royal-foreground/80">Neemrana Ghiloth Industrial Road,</p>
-                  <p className="text-royal-foreground/80">Neemarana, Rajasthan 301705</p>
+                  <p className="text-royal-foreground/80">Neemarana, NCR 301705</p>
                 </div>
               </div>
             </div>

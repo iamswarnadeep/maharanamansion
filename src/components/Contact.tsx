@@ -182,7 +182,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-2">Location</h4>
-                    <p className="text-muted-foreground">Neemrana Ghiloth Industrial Road, Neemarana, Rajasthan 301705</p>
+                    <p className="text-muted-foreground">Neemrana Ghiloth Industrial Road, Neemarana, NCR 301705</p>
                     <p className="text-primary"><a href="https://maps.app.goo.gl/ibmrxCTJxCBsuuRy6" target="_blank">Open in Google Maps</a></p>
                   </div>
                 </div>

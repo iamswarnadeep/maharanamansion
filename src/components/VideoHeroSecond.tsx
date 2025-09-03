@@ -1,6 +1,6 @@
 import { Crown, Phone, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import brochure from "@/assets/brochure.pdf";
+import brochure from "@/assets/portfolio.pdf";
 import maharanaVideo from "@/assets/maharana-main-video-two.mp4";
 
 const VideoHero = () => {
