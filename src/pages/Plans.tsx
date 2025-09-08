@@ -348,7 +348,9 @@ const Plans = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Book Consultation
               </Button>
-              <Button className="bg-transparent text-primary border-2 border-primary" size="lg">
+              <Button className="bg-transparent text-primary border-2 border-primary" size="lg"
+                onClick={() => window.open(brochure, "_blank")}
+                >
                 Download Floor Plans
               </Button>
             </div>
