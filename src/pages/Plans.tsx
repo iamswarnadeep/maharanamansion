@@ -224,11 +224,11 @@ const Plans = () => {
                 <Home className="w-4 h-4" />
                 Maharana Mansion
               </TabsTrigger>
-              <TabsTrigger value="shiva" className="flex items-center gap-2 text-sm">
+              <TabsTrigger value="shiva" className="flex items-center gap-2 text-sm pointer-events-none">
                 <Building className="w-4 h-4" />
                 Shiva Sapphire
               </TabsTrigger>
-              <TabsTrigger value="samrat" className="flex items-center gap-2 text-sm">
+              <TabsTrigger value="samrat" className="flex items-center gap-2 text-sm pointer-events-none">
                 <Crown className="w-4 h-4" />
                 Samrat Shrine
               </TabsTrigger>
