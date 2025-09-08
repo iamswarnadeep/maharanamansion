@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Crown, Phone, Mail, MapPin, Clock, Download, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import brochure from "@/assets/portfolio.pdf";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -211,11 +212,15 @@ const Contact = () => {
                 Get detailed information about floor plans, pricing, and payment options.
               </p>
               <div className="space-y-3">
-                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                  onClick={() => window.open(brochure, "_blank")}
+                  >
                   <Download className="w-5 h-5" />
-                  Project Brochure
+                  Project Portfolio
                 </Button>
-                <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+                <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                  onClick={() => window.open(brochure, "_blank")}
+                  >
                   <Download className="w-5 h-5" />
                   Floor Plans
                 </Button>
