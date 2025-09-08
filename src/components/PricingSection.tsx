@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Home, Crown, Ruler, Users } from "lucide-react";
+import brochure from "@/assets/portfolio.pdf";
 
 const PricingSection = () => {
   const pricingPlans = [
@@ -100,8 +101,10 @@ const PricingSection = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button variant="default" size="lg">
-                    View Floor Plan
+                  <Button variant="default" size="lg"
+                    onClick={() => window.open(brochure, "_blank")}
+                    >
+                    View Portfolio
                   </Button>
                   <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "#contact")}>
                     Book Now
