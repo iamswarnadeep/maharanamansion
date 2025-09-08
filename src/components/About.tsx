@@ -105,7 +105,7 @@ const About = () => {
               Schedule a Visit
             </Button>
             <Button className="bg-transparent text-primary border-2 border-primary" size="lg" >
-              Download Floor Plans
+              Download Portfolio
             </Button>
           </div>
         </div>
