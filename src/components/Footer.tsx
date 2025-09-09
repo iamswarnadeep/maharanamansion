@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="flex items-center gap-1 text-sm text-royal-foreground/80">
               <span>Developed by</span>
               <Heart className="w-4 h-4 text-gold mx-1" />
-              <span className="text-gold"><a href="https://swarnadeep.in" target="_blank">Swarnadeep</a></span>
+              <span className="text-gold">Gennext Infratech</span>
             </div>
           </div>
         </div>
