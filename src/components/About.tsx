@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Crown, Home, Sparkles, TreePine, Shield, Users } from "lucide-react";
+import brochure from "@/assets/portfolio.pdf";
 
 const About = () => {
   const features = [
@@ -104,8 +105,10 @@ const About = () => {
             <Button variant="default" size="lg" onClick={() => window.location.href = "#contact"}>
               Schedule a Visit
             </Button>
-            <Button className="bg-transparent text-primary border-2 border-primary" size="lg" >
-              Download Floor Plans
+            <Button className="bg-transparent text-primary border-2 border-primary" size="lg" 
+              onClick={() => window.open(brochure, "_blank")}
+              >
+              Download Portfolio
             </Button>
           </div>
         </div>

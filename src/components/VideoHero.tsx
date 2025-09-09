@@ -59,7 +59,7 @@ const VideoHero = () => {
               onClick={() => window.open(brochure, "_blank")}
             >
               <Download className="w-5 h-5 mr-2" />
-              Download Brochure
+              Download Portfolio
             </Button>
           </div>
         </div>

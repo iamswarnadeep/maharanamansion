@@ -47,7 +47,7 @@ const Footer = () => {
               <a href="#" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">
+              <a href="https://www.instagram.com/maharana_mansion" target="_blank" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">

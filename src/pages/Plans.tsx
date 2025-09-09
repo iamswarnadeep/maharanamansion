@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Home, Building, Crown, MapPin, Ruler, Users } from "lucide-react";
 import floorPlans from "@/assets/floor-plans.jpg";
+import brochure from "@/assets/portfolio.pdf";
 
 const Plans = () => {
   const maharanaPlans = [
@@ -132,7 +133,9 @@ const Plans = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3">
-        <Button variant="default" size="lg" className="flex-1">
+        <Button variant="default" size="lg" className="flex-1" 
+          onClick={() => window.open(brochure, "_blank")}
+          >
           View Floor Plan
         </Button>
         <Button className="flex-1 bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "/contact")}>
@@ -224,11 +227,11 @@ const Plans = () => {
                 <Home className="w-4 h-4" />
                 Maharana Mansion
               </TabsTrigger>
-              <TabsTrigger value="shiva" className="flex items-center gap-2 text-sm">
+              <TabsTrigger value="shiva" className="flex items-center gap-2 text-sm pointer-events-none">
                 <Building className="w-4 h-4" />
                 Shiva Sapphire
               </TabsTrigger>
-              <TabsTrigger value="samrat" className="flex items-center gap-2 text-sm">
+              <TabsTrigger value="samrat" className="flex items-center gap-2 text-sm pointer-events-none">
                 <Crown className="w-4 h-4" />
                 Samrat Shrine
               </TabsTrigger>
@@ -345,7 +348,9 @@ const Plans = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Book Consultation
               </Button>
-              <Button className="bg-transparent text-primary border-2 border-primary" size="lg">
+              <Button className="bg-transparent text-primary border-2 border-primary" size="lg"
+                onClick={() => window.open(brochure, "_blank")}
+                >
                 Download Floor Plans
               </Button>
             </div>
