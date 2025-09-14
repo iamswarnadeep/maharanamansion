@@ -37,13 +37,13 @@ const Location = () => {
       description: "Historic 15th-century fort palace, now a luxury heritage hotel"
     },
     {
-      name: "Korean Industrial Zone",
+      name: "EPIP Industrial Hub",
       distance: "6 km", 
-      type: "Industrial Hub",
-      description: "Major employment hub with multinational companies"
+      type: "Industrial Hub (North India’s No.1)",
+      description: "A Large Industrial Corridor in Delhi NCR Region."
     },
     {
-      name: "Queen's Baoli",
+      name: "Queen's Bawdi",
       distance: "3 km",
       type: "Historical Monument",
       description: "Ancient stepwell showcasing Indo-Islamic architecture"

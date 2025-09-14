@@ -203,7 +203,7 @@ const Plans = () => {
               </div>
               <h3 className="text-2xl font-bold text-secondary heading-font mb-4">Phase II: Shiva Sapphire</h3>
               <p className="text-muted-foreground body-font mb-4">Maratha Architecture - Luxury Apartments</p>
-              <div className="text-lg font-semibold">₹65L - ₹1.2Cr</div>
+              <div className="text-lg font-semibold">Coming Soon</div>
             </div>
 
             <div className="bg-gradient-to-br from-gold/10 to-gold/5 rounded-3xl p-8 shadow-luxury text-center">
@@ -212,7 +212,7 @@ const Plans = () => {
               </div>
               <h3 className="text-2xl font-bold text-gold heading-font mb-4">Phase III: Samrat Shrine</h3>
               <p className="text-muted-foreground body-font mb-4">Vedic Architecture - Premium Villas</p>
-              <div className="text-lg font-semibold">₹1.5Cr - ₹3Cr</div>
+              <div className="text-lg font-semibold">Coming Soon</div>
             </div>
           </div>
         </div>
