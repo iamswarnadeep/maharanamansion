@@ -18,7 +18,7 @@ const Plans = () => {
         "One spacious bedroom",
         "One bathroom",
         "Beautiful kitchen",
-        "One balcony with scenic views",
+        "One balcony with scenic mountain views",
       ]
     },
     {
@@ -31,7 +31,7 @@ const Plans = () => {
         "Two spacious bedrooms",
         "Two bathrooms (one attached)",
         "Beautiful kitchen",
-        "One balcony with scenic views",
+        "One balcony with scenic fort views",
       ]
     }
   ];
@@ -133,12 +133,12 @@ const Plans = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3">
-        <Button variant="default" size="lg" className="flex-1" 
+        <Button variant="default" size="lg"
           onClick={() => window.open(brochure, "_blank")}
           >
           View Floor Plan
         </Button>
-        <Button className="flex-1 bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "/contact")}>
+        <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "/contact")}>
           Schedule Visit
         </Button>
       </div>
@@ -193,7 +193,7 @@ const Plans = () => {
                 <Home className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold text-primary heading-font mb-4">Phase I: Maharana Mansion</h3>
-              <p className="text-muted-foreground body-font mb-4">Rajputana Architecture - Affordable Housing</p>
+              <p className="text-muted-foreground body-font mb-4">Palatial Architecture - Premium Living</p>
               <div className="text-lg font-semibold">₹14.50L - ₹19.50L</div>
             </div>
 
@@ -202,7 +202,7 @@ const Plans = () => {
                 <Building className="w-8 h-8 text-secondary-foreground" />
               </div>
               <h3 className="text-2xl font-bold text-secondary heading-font mb-4">Phase II: Shiva Sapphire</h3>
-              <p className="text-muted-foreground body-font mb-4">Maratha Architecture - Luxury Apartments</p>
+              <p className="text-muted-foreground body-font mb-4">Ancient Living - Luxury Apartments</p>
               <div className="text-lg font-semibold">Coming Soon</div>
             </div>
 
@@ -211,7 +211,7 @@ const Plans = () => {
                 <Crown className="w-8 h-8 text-gold-foreground" />
               </div>
               <h3 className="text-2xl font-bold text-gold heading-font mb-4">Phase III: Samrat Shrine</h3>
-              <p className="text-muted-foreground body-font mb-4">Vedic Architecture - Premium Villas</p>
+              <p className="text-muted-foreground body-font mb-4">Vedic Architecture -  Heritage Living</p>
               <div className="text-lg font-semibold">Coming Soon</div>
             </div>
           </div>
@@ -243,8 +243,7 @@ const Plans = () => {
                   Maharana Mansion - Phase I
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto body-font">
-                  Affordable luxury housing inspired by Rajputana architecture. Perfect for families seeking 
-                  heritage living at accessible prices.
+                  Affordable luxury housing inspired by premium housing inspired by palatial architecture. A perfect blend of rich historic heritage of India.
                 </p>
               </div>
               
@@ -348,11 +347,11 @@ const Plans = () => {
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>
                 Book Consultation
               </Button>
-              <Button className="bg-transparent text-primary border-2 border-primary" size="lg"
+              {/* <Button className="bg-transparent text-primary border-2 border-primary" size="lg"
                 onClick={() => window.open(brochure, "_blank")}
                 >
                 Download Floor Plans
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

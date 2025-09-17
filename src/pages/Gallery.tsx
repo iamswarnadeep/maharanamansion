@@ -8,31 +8,12 @@ import { Camera, Video, Image as ImageIcon, Building, ChevronLeft, ChevronRight,
 import rajputanaGallery from "@/assets/rajputana-gallery.jpg";
 import brochure from "@/assets/portfolio.pdf";
 
-// const Image1 = "https://i.postimg.cc/HxjWLSKx/Image1.jpg";
-// const Image2 = "https://i.postimg.cc/h4kmHxzx/Image2.jpg";
-// const Image3 = "https://i.postimg.cc/v8g9qXBb/Image3.jpg";
-// const Image4 = "https://i.postimg.cc/Wzk2Gdsc/Image4.jpg";
-// const Image5 = "https://i.postimg.cc/zBMzHCZk/Image5.jpg";
-// const Image6 = "https://i.postimg.cc/0NyKp0Fg/Image6.jpg";
-// const Image7 = "https://i.postimg.cc/Xv5S1TT9/Image7.jpg";
-// const Image8 = "https://i.postimg.cc/mgwFz5dN/Image8.jpg";
-// const Image9 = "https://i.postimg.cc/RVwt9FKY/Image9.jpg";
-// const Image10 = "https://i.postimg.cc/W1jk4v71/Image10.jpg";
-// const Image11 = "https://i.postimg.cc/XJZZP7nQ/Image11.jpg";
-// const Image12 = "https://i.postimg.cc/1z7nMN18/Image12.jpg";
-
 const Image1 = "https://lh3.google.com/u/1/d/1j8m1K5o_bvdekkxC3qUNCbnG2LnyOvK4=w1920-h912-iv1?auditContext=prefetch";
 const Image2 = "https://lh3.google.com/u/1/d/1N73b22j54xaToZj-xLRkJqb8V9_dIR5J=w1920-h912-iv1?auditContext=prefetch";
 const Image3 = "https://lh3.google.com/u/1/d/1LEO5uQnAlfpS0F209GykTvUu9Jau2v3I=w1920-h912-iv1?auditContext=prefetch";
 const Image4 = "https://lh3.google.com/u/1/d/1JL9O7-HtpmvsSToOy0j9ZMg0onBHS7Nv=w1920-h912-iv1?auditContext=prefetch";
 const Image5 = "https://lh3.google.com/u/1/d/1CWYTrW_W5qweRj3yVJ1VePqSQesY-pEV=w1920-h912-iv1?auditContext=prefetch";
 const Image6 = "https://lh3.google.com/u/1/d/18XinfJS5WIOsQh1aoX5ZHmNsbEVhtl3K=w1920-h912-iv1?auditContext=prefetch";
-// const Image7 = "https://i.postimg.cc/Xv5S1TT9/Image7.jpg";
-// const Image8 = "https://i.postimg.cc/mgwFz5dN/Image8.jpg";
-// const Image9 = "https://i.postimg.cc/RVwt9FKY/Image9.jpg";
-// const Image10 = "https://i.postimg.cc/W1jk4v71/Image10.jpg";
-// const Image11 = "https://i.postimg.cc/XJZZP7nQ/Image11.jpg";
-// const Image12 = "https://i.postimg.cc/1z7nMN18/Image12.jpg";
 
 const Gallery = () => {
   // Use simple arrays of image sources (no titles/descriptions anywhere)
@@ -42,39 +23,21 @@ const Gallery = () => {
     Image3,
     Image4,
     Image5,
-    Image6,
-    // Image7,
-    // Image8,
-    // Image9,
-    // Image10,
-    // Image11,
-    // Image12
+    Image6
   ];
 
   const amenityImages: string[] = [
     Image5,
     Image6,
-    // Image7,
-    // Image8,
     Image1,
     Image2,
     Image3,
-    Image4,
-    // Image9,
-    // Image10,
-    // Image11,
-    // Image12
+    Image4
   ];
 
   const locationImages: string[] = [
-    // Image9,
-    // Image10,
-    // Image11,
-    // Image12,
     Image5,
     Image6,
-    // Image7,
-    // Image8,
     Image1,
     Image2,
     Image3,
@@ -215,7 +178,7 @@ const Gallery = () => {
               </TabsTrigger>
               <TabsTrigger value="location" className="flex items-center gap-2 text-sm">
                 <Camera className="w-4 h-4" />
-                Location
+                Material 
               </TabsTrigger>
               <TabsTrigger value="virtual" className="flex items-center gap-2 text-sm">
                 <Video className="w-4 h-4" />
@@ -256,7 +219,7 @@ const Gallery = () => {
                   <div className="bg-secondary p-6 rounded-xl w-fit mx-auto mb-6">
                     <Building className="w-12 h-12 text-secondary-foreground" />
                   </div>
-                  <h4 className="text-2xl font-bold heading-font mb-4">Interactive Floor Plans</h4>
+                  <h4 className="text-2xl font-bold heading-font mb-4">Floor Plans</h4>
                   <p className="text-muted-foreground body-font mb-6">
                     Explore detailed, interactive floor plans for all apartment configurations and layouts.
                   </p>
@@ -319,7 +282,7 @@ const Gallery = () => {
                 size="lg"
                 onClick={() => window.open(brochure, "_blank")}
               >
-                Download Brochure
+                Download Portfolio
               </Button>
             </div>
           </div>

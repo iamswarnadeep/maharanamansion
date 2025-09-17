@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { MapPin, Car, Plane, Train, Building, Clock, School, Hospital } from "lucide-react";
+import { MapPin, Car, Plane, Train, Building, Clock, School, Hospital, BusFront } from "lucide-react";
 import aravaliMountains from "@/assets/aravali-mountains.jpg";
 
 const Location = () => {
@@ -9,50 +9,53 @@ const Location = () => {
     {
       icon: Car,
       title: "By Road",
-      distance: "Delhi: 122 km",
-      time: "2 hours",
-      details: "Via NH-8, excellent highway connectivity"
+      distance: " IGI Airport: 109km",
+      time: "3 hours"
     },
     {
       icon: Train,
-      title: "By Train", 
-      distance: "Rewari Junction: 35 km",
-      time: "45 mins",
-      details: "Well-connected railway station"
+      title: "By Train",
+      distance: "Nearby Junction: 40 km",
+      time: "55 mins"
     },
     {
       icon: Plane,
       title: "By Air",
-      distance: "IGI Airport: 140 km",
-      time: "2.5 hours",
-      details: "International airport accessibility"
+      distance: "Upcoming airport: 40 km",
+      time: "55 mins"
+    },
+    {
+      icon: BusFront,
+      title: "By Metro",
+      distance: "Upcoming metro: 2.2 km",
+      time: "5 mins"
     }
   ];
 
   const landmarks = [
     {
       name: "Neemrana Fort Palace",
-      distance: "2 km",
+      distance: "1 km",
       type: "Heritage Hotel",
       description: "Historic 15th-century fort palace, now a luxury heritage hotel"
     },
     {
       name: "EPIP Industrial Hub",
-      distance: "6 km", 
+      distance: "1.5 km",
       type: "Industrial Hub (North India’s No.1)",
       description: "A Large Industrial Corridor in Delhi NCR Region."
     },
     {
       name: "Queen's Bawdi",
-      distance: "3 km",
+      distance: "200 m",
       type: "Historical Monument",
       description: "Ancient stepwell showcasing Indo-Islamic architecture"
     },
     {
-      name: "Siliserh Lake",
-      distance: "25 km",
+      name: "Sariska Wildlife Sanctuary",
+      distance: "90 km",
       type: "Tourist Spot",
-      description: "Beautiful lake with boating and recreational activities"
+      description: "Beautiful sanctuary with boating and recreational activities"
     }
   ];
 
@@ -60,50 +63,53 @@ const Location = () => {
     {
       icon: School,
       title: "Education",
-      items: ["DAV Public School (5 km)", "Neemrana College (8 km)", "Various coaching centers"]
+      items: ["Renowned Schools", "Aeronautical Engineering College", "NIIT", "Various Academies"]
     },
     {
       icon: Hospital,
-      title: "Healthcare", 
-      items: ["Neemrana Hospital (4 km)", "Primary Health Center (2 km)", "Specialty clinics nearby"]
+      title: "Healthcare",
+      items: ["Neemrana Hospital", "Primary Health Center", "Specialty Clinics nearby", "Ayurvedic & Wellness Centers"
+      ]
     },
     {
       icon: Building,
       title: "Commercial",
-      items: ["Neemrana Market (3 km)", "Shopping complexes", "Banks and ATMs"]
+      items: ["Neemrana Market", "Modern Shopping Complexes", "Banks and ATMs", "Daily Convenience Stores"
+      ]
     },
     {
       icon: Clock,
       title: "Entertainment",
-      items: ["Neemrana Fort events", "Adventure sports", "Cultural programs"]
+      items: ["Neemrana Fort Palace events", "Adventure Sports & Zipline", "Cultural Festivals & Programs", "Resorts & Weekend Getaways"
+      ]
     }
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${aravaliMountains})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
         </div>
-        
+
         <div className="relative z-10 text-center text-white px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
             <MapPin className="w-5 h-5 text-gold" />
             <span className="font-semibold">Prime Location</span>
           </div>
-          
+
           <div className="hero-text text-4xl md:text-7xl font-dala text-white mb-2 leading-tight">
             Neemrana, Rajasthan
           </div>
-          
+
           <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed body-font">
-            Strategically located in the foothills of Aravali mountains with Delhi NCR connectivity
+            Strategically located in the foothills of Neemrana Fort Palace and the Aravali mountain range with seamless NCR connectivity
           </p>
         </div>
       </section>
@@ -113,22 +119,22 @@ const Location = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8">
-              30 acres of Prime Land
+              30 acres of planned Heritage Land
             </h2>
-            
+
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl p-8 lg:p-12 shadow-luxury border border-primary/20 mb-16">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <MapPin className="w-8 h-8 text-primary" />
                 <h3 className="text-3xl font-bold text-primary heading-font">Strategic Acquisition</h3>
               </div>
               <p className="text-2xl font-bold text-foreground heading-font leading-relaxed">
-                Gennext has acquired <span className="text-primary">30 acres of prime land</span> under the foothills of 
-                <span className="text-secondary"> Neemrana Fort and the Aravali mountain range</span>
+                Gennext has acquired <span className="text-primary">30 acres of prime heritage land </span>
+                <span className="text-secondary"> and divided into three phase of conceptually designed named Gennext Heritage City</span>
               </p>
             </div>
 
             <p className="text-xl text-muted-foreground leading-relaxed body-font">
-              This exceptional location combines the serenity of mountain foothills with the convenience of 
+              This exceptional location combines the serenity of mountain foothills with the convenience of
               urban connectivity, making it the perfect setting for our Heritage City development.
             </p>
           </div>
@@ -160,7 +166,7 @@ const Location = () => {
                 title="Neemrana Location Map"
               ></iframe>
             </div>
-            
+
             <div className="mt-6 text-center">
               <p className="text-muted-foreground body-font">
                 <strong>Address:</strong> Neemrana, Alwar District, NCR 301705
@@ -182,7 +188,7 @@ const Location = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             {connectivity.map((connect, index) => (
               <div
                 key={index}
@@ -194,7 +200,7 @@ const Location = () => {
                 <h3 className="text-2xl font-bold heading-font mb-4">{connect.title}</h3>
                 <div className="text-xl font-semibold text-primary mb-2">{connect.distance}</div>
                 <div className="text-lg text-secondary font-semibold mb-4">{connect.time}</div>
-                <p className="text-muted-foreground body-font">{connect.details}</p>
+                {/* <p className="text-muted-foreground body-font">{connect.details}</p> */}
               </div>
             ))}
           </div>
@@ -204,15 +210,15 @@ const Location = () => {
             <h3 className="text-3xl font-bold text-center heading-font mb-8">Distance from Major Cities</h3>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2 heading-font">122 km</div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">113 km</div>
                 <div className="text-muted-foreground body-font">Delhi</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2 heading-font">85 km</div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">90 km</div>
                 <div className="text-muted-foreground body-font">Gurgaon</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2 heading-font">150 km</div>
+                <div className="text-3xl font-bold text-primary mb-2 heading-font">148 km</div>
                 <div className="text-muted-foreground body-font">Jaipur</div>
               </div>
               <div>
@@ -261,7 +267,7 @@ const Location = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
-              Local Amenities
+              Local Amenities under 1km
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
               Complete ecosystem of essential services and facilities
@@ -300,7 +306,7 @@ const Location = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
-                Why This Location?
+                Short Walk Away
               </h2>
             </div>
 
@@ -323,7 +329,7 @@ const Location = () => {
                     <Building className="w-6 h-6 text-secondary-foreground" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold heading-font mb-2">Industrial Growth</h3>
+                    <h3 className="text-xl font-bold heading-font mb-2">Industrial Corridor </h3>
                     <p className="text-muted-foreground body-font">
                       Proximity to Korean Industrial Zone ensures strong residential demand from professionals
                     </p>
@@ -335,9 +341,9 @@ const Location = () => {
                     <Car className="w-6 h-6 text-gold-foreground" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold heading-font mb-2">Strategic Connectivity</h3>
+                    <h3 className="text-xl font-bold heading-font mb-2">Connectivity Advantage</h3>
                     <p className="text-muted-foreground body-font">
-                      Part of Delhi NCR growth corridor with excellent highway connectivity
+                      Strategically Part of Delhi Ncr's Growth Corridor With Undamaged Highway and Express Way Connectivity
                     </p>
                   </div>
                 </div>
@@ -363,7 +369,7 @@ const Location = () => {
                     <span className="text-primary">✓</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="font-semibold">Natural Beauty</span>
+                    <span className="font-semibold">Excellent AQI</span>
                     <span className="text-primary">✓</span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -384,8 +390,8 @@ const Location = () => {
             <h3 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
               Visit Our Location
             </h3>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto body-font">
-              Experience the beauty and strategic advantages of our Neemrana location firsthand.
+            <p className="text-xl text-muted-foreground mb-8 max-w-5xl mx-auto body-font">
+              Discover the perfect balance of beauty and opportunity at our Neemrana location — where scenic charm meets world-class infrastructure, thriving industrial growth, and seamless highway connectivity. Positioned within the Delhi NCR growth corridor, Neemrana offers not only a serene living environment but also unmatched access to business hubs, educational institutions, and future-ready development, making it an ideal destination for both lifestyle and investment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="default" size="lg" onClick={() => window.location.href = "/contact"}>

@@ -15,7 +15,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Plans", href: "/plans" },
+    { name: "Pricing", href: "/plans" },
     { name: "Location", href: "/location" },
     { name: "Contact", href: "/contact" },
   ];
@@ -90,7 +90,7 @@ const Header = () => {
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
               <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
-                Download Brochure
+                Download Portfolio
               </Button>
               <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"}>
                 <Crown className="w-4 h-4" />
@@ -127,7 +127,7 @@ const Header = () => {
               ))}
               <div className="flex flex-col space-y-3 pt-4">
                 <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
-                  Download Brochure
+                  Download Portfolio
                 </Button>
                 <Button variant="royal" size="sm" onClick={() => window.location.href = "#contact"}>
                   <Crown className="w-4 h-4" />

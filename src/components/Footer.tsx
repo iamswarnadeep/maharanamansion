@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Crown, Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Crown, Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube, Newspaper } from "lucide-react";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import logo from "@/assets/logo.png";
 import mainlogo from "@/assets/maharana-logo.png";
 
@@ -9,16 +10,16 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Plans", href: "/plans" },
+    { name: "Pricing", href: "/plans" },
     { name: "Location", href: "/location" },
     { name: "Contact", href: "/contact" },
   ];
 
   const services = [
-    "1 BHK Apartments",
-    "2 BHK Apartments", 
+    "1BHK & 2BHK Apartments", 
     "Site Visit Booking",
     "Home Loan Assistance",
+    "Post Sales Documentation",
     "Interior Design",
     "Property Management"
   ];
@@ -38,7 +39,7 @@ const Footer = () => {
               </div> */}
             </div>
             <p className="text-royal-foreground/80 mb-6 leading-relaxed">
-              Experience the legendary concept of affordable luxury housing.
+              Experience the legendary concept of affordable housing.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-royal-foreground/10 p-3 rounded-lg hover:bg-gold hover:text-royal transition-colors">
@@ -111,6 +112,11 @@ const Footer = () => {
                   <p className="text-royal-foreground/80">Neemarana, NCR 301705</p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-3">
+                <Newspaper className="w-5 h-5 text-gold mt-1" />
+                <a className="text-royal-foreground/80" href="/terms" target="_blank">Terms & Conditions</a>
+              </div>
             </div>
           </div>
         </div>
@@ -131,6 +137,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <FloatingWhatsApp
+        phoneNumber="+918177802100"
+        accountName="Maharana Mansion"
+        allowEsc
+        allowClickAway
+        notification
+        notificationSound
+        statusMessage="Typically replies within 1 mins"
+      />
     </footer>
   );
 };

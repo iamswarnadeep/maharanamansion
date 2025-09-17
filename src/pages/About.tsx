@@ -35,7 +35,7 @@ const About = () => {
       highlights: [
         "Palatial Rajputana-inspired architecture",
         "Scenic views of Aravali hills", 
-        "Proximity to Neemrana Fort & Queen's Baoli",
+        "Proximity to Neemrana Fort & Queen's Bawdi",
         "Ideal for industrial workers and families"
       ]
     },
@@ -189,7 +189,7 @@ const About = () => {
                     <div className="bg-primary p-2 rounded-lg mt-1">
                       <Users className="w-5 h-5 text-primary-foreground" />
                     </div>
-                    <p className="text-lg body-font">Close to Korean Industrial Zone at Ghilot (6 km away)</p>
+                    <p className="text-lg body-font">Close to Industrial and Institutional Zones</p>
                   </div>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const About = () => {
                     <h4 className="font-bold text-primary heading-font">Tourism</h4>
                   </div>
                   <div className="bg-card rounded-xl p-4">
-                    <h4 className="font-bold text-primary heading-font">Industry</h4>
+                    <h4 className="font-bold text-primary heading-font">Industries</h4>
                   </div>
                   <div className="bg-card rounded-xl p-4">
                     <h4 className="font-bold text-primary heading-font">Connectivity</h4>
@@ -296,7 +296,7 @@ const About = () => {
                 Schedule a Visit
               </Button>
               <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => window.open(brochure, "_blank")}>
-                Download Brochure
+                Download Portfolio
               </Button>
             </div>
           </div>

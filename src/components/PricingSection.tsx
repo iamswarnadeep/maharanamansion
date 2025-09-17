@@ -46,7 +46,7 @@ const PricingSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
             <Ruler className="w-5 h-5 text-primary" />
-            <span className="font-semibold text-primary">Special Pricing</span>
+            <span className="font-semibold text-primary">Exclusive Pricing</span>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">

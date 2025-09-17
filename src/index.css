@@ -312,3 +312,7 @@ All colors are HSL values inspired by Rajasthani palace architecture
     color: white !important;
   }
 }
+
+.floating-whatsapp-chatbox input {
+  color: black !important;
+}

@@ -101,7 +101,7 @@ const ImageSlider = () => {
                     </Button>
                     <Button variant="premium" size="xl" className="group">
                       <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                      Download Brochure
+                      Download Portfolio
                     </Button>
                   </div>
 

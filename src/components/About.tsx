@@ -67,8 +67,8 @@ const About = () => {
             <div className="text-muted-foreground text-lg body-font">Apartments</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">004</div>
-            <div className="text-muted-foreground text-lg body-font">Towers</div>
+            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">4</div>
+            <div className="text-muted-foreground text-lg body-font">Commercial Units</div>
           </div>
           <div className="text-center">
             <div className="text-4xl lg:text-5xl font-bold text-primary mb-2 heading-font">209</div>

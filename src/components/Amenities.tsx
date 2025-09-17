@@ -75,7 +75,7 @@ const Amenities = () => {
             <div className="flex flex-col items-center">
               {/* <div className="text-4xl font-bold text-gold mb-2">100%</div> */}
               <Wind className="w-10 h-10 text-gold" />
-              <div className="text-royal-foreground/80">Good Quality <br/>Fresh Air</div>
+              <div className="text-royal-foreground/80">Excellent Air <br/>Quality</div>
             </div>
             <div className="flex flex-col items-center">
               {/* <div className="text-4xl font-bold text-gold mb-2">24/7</div> */}
@@ -85,7 +85,7 @@ const Amenities = () => {
             <div className="flex flex-col items-center">
               {/* <div className="text-4xl font-bold text-gold mb-2">80%</div> */}
               <HeartPulse className="w-10 h-10 text-gold" />
-              <div className="text-royal-foreground/80">A Healthier Lifestyle <br/>Naturally Yours</div>
+              <div className="text-royal-foreground/80">A Healthier Lifestyle <br/>Narcissist You</div>
             </div>
           </div>
         </div>
