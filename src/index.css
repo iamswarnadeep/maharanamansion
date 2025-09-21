@@ -316,3 +316,9 @@ All colors are HSL values inspired by Rajasthani palace architecture
 .floating-whatsapp-chatbox input {
   color: black !important;
 }
+
+.floating-whatsapp-button {
+  background: linear-gradient(135deg,
+        rgba(235, 30, 39, 1) 0%,
+        rgba(75, 6, 63, 1) 100%) !important;
+}
