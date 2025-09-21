@@ -41,7 +41,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background" data-aos="fade-left">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
@@ -59,7 +59,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12" data-aos="fade-left">
           {pricingPlans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
@@ -116,7 +116,7 @@ const PricingSection = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div className="text-center">
+        <div className="text-center" data-aos="fade-left">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="flex items-center justify-center gap-3 bg-card border border-black border-solid rounded-xl p-4">
               <Users className="w-5 h-5 text-primary" />

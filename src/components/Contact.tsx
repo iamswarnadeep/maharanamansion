@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted">
+    <section id="contact" className="py-20 bg-muted" data-aos="fade-right">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

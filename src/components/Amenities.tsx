@@ -25,7 +25,7 @@ const Amenities = () => {
   ];
 
   return (
-    <section id="amenities" className="py-20 bg-muted">
+    <section id="amenities" className="py-20 bg-muted" data-aos="fade-right">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -44,7 +44,7 @@ const Amenities = () => {
         </div>
 
         {/* Amenities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-16" data-aos="fade-right">
           {amenities.map((amenity, index) => (
             <div
               key={index}
@@ -64,7 +64,7 @@ const Amenities = () => {
         </div>
 
         {/* Feature Highlight */}
-        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center">
+        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center" data-aos="fade-left">
           <h3 className="text-3xl lg:text-4xl font-bold text-royal-foreground mb-6">
             Elevating everyday living with the gift of nature
           </h3>

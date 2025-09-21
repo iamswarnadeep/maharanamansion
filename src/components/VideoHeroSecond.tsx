@@ -5,7 +5,7 @@ import maharanaVideo from "@/assets/maharana-main-video-two.mp4";
 
 const VideoHero = () => {
   return (
-    <section className="relative h-[85vh] overflow-hidden">
+    <section className="relative h-[85vh] overflow-hidden" data-aos="fade-right">
       {/* Video Background - Using placeholder for now */}
       <div className="absolute inset-0">
         <video

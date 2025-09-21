@@ -17,7 +17,7 @@ const Index = () => {
         <VideoHero />
       </section>
       <About />
-      <section id="amenities" className="pt-20 bg-background">
+      <section id="amenities" className="pt-20 bg-background" data-aos="fade-left">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-6 py-2 mb-6">

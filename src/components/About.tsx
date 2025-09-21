@@ -37,7 +37,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted">
+    <section id="about" className="py-20 bg-muted" data-aos="fade-right">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -81,7 +81,8 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 luxury-hover"
+              data-aos="fade-right"
+              className=" bg-card rounded-2xl p-8 shadow-soft hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 luxury-hover"
             >
               <div className="bg-primary p-4 rounded-xl w-fit mb-6">
                 <feature.icon className="w-8 h-8 text-primary-foreground" />
@@ -93,7 +94,7 @@ const About = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-luxury text-center">
+        <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-luxury text-center" data-aos="fade-right">
           <h3 className="text-3xl lg:text-4xl font-bold royal-heading heading-font mb-6">
             Experience Royal Living Today
           </h3>
