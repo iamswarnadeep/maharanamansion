@@ -25,10 +25,10 @@ const Amenities = () => {
   ];
 
   return (
-    <section id="amenities" className="py-20 bg-muted" data-aos="fade-right">
+    <section id="amenities" className="py-20 bg-muted" >
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-right">
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-6 py-2 mb-6">
             <Crown className="w-5 h-5 text-gold" />
             <span className="text-gold font-semibold">Easy Commute</span>
@@ -64,7 +64,7 @@ const Amenities = () => {
         </div>
 
         {/* Feature Highlight */}
-        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center" data-aos="fade-left">
+        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center" data-aos="fade-right">
           <h3 className="text-3xl lg:text-4xl font-bold text-royal-foreground mb-6">
             Elevating everyday living with the gift of nature
           </h3>

@@ -40,7 +40,6 @@ const Image31 = "https://i.ibb.co/MkXqkW3n/IMG-0634.jpg";
 
 const Image32 = "https://i.ibb.co/qYQSHh0m/Chat-GPT-Image-Aug-20-2025-11-28-58-PM.png";
 const Image33 = "https://i.ibb.co/FkCq3QnG/Chat-GPT-Image-Aug-21-2025-09-28-53-PM.png";
-const Image34 = "https://i.ibb.co/xvCzRd7/Chat-GPT-Image-Aug-21-2025-09-42-13-PM.png";
 const Image35 = "https://i.ibb.co/cXcBbw2Y/Chat-GPT-Image-Aug-21-2025-10-23-44-PM.png";
 const Image36 = "https://i.ibb.co/RGF6Wn9M/Chat-GPT-Image-Aug-21-2025-11-29-32-PM.png";
 const Image37 = "https://i.ibb.co/Z6KLngWd/Chat-GPT-Image-Aug-21-2025-12-08-35-AM.png";
@@ -55,7 +54,7 @@ const Image44 = "https://i.ibb.co/8LPnJ1Pt/slide-5.png";
 const Image45 = "https://i.ibb.co/jPQ2zJ53/slide-6.png";
 
 // ✅ Categorized arrays
-const architectureImages = [Image32, Image33, Image34, Image35, Image36, Image37, Image38, Image39];
+const architectureImages = [Image32, Image33, Image35, Image36, Image37, Image38, Image39];
 const amenityImages = [Image40, Image41, Image42, Image43, Image44, Image45];
 const locationImages = [
   Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10,
