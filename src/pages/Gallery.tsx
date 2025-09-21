@@ -1,139 +1,12 @@
-import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Camera, Video, Image as ImageIcon, Building, ChevronLeft, ChevronRight, X } from "lucide-react";
 import rajputanaGallery from "@/assets/rajputana-gallery.jpg";
 import brochure from "@/assets/portfolio.pdf";
-
-const Image1 = "https://lh3.google.com/u/1/d/1j8m1K5o_bvdekkxC3qUNCbnG2LnyOvK4=w1920-h912-iv1?auditContext=prefetch";
-const Image2 = "https://lh3.google.com/u/1/d/1N73b22j54xaToZj-xLRkJqb8V9_dIR5J=w1920-h912-iv1?auditContext=prefetch";
-const Image3 = "https://lh3.google.com/u/1/d/1LEO5uQnAlfpS0F209GykTvUu9Jau2v3I=w1920-h912-iv1?auditContext=prefetch";
-const Image4 = "https://lh3.google.com/u/1/d/1JL9O7-HtpmvsSToOy0j9ZMg0onBHS7Nv=w1920-h912-iv1?auditContext=prefetch";
-const Image5 = "https://lh3.google.com/u/1/d/1CWYTrW_W5qweRj3yVJ1VePqSQesY-pEV=w1920-h912-iv1?auditContext=prefetch";
-const Image6 = "https://lh3.google.com/u/1/d/18XinfJS5WIOsQh1aoX5ZHmNsbEVhtl3K=w1920-h912-iv1?auditContext=prefetch";
+import floorPlans from "@/assets/floorPlans.pdf";
+import PhotoShowcase from "@/components/PhotoShowcase";
 
 const Gallery = () => {
-  // Use simple arrays of image sources (no titles/descriptions anywhere)
-  const architectureImages: string[] = [
-    Image1,
-    Image2,
-    Image3,
-    Image4,
-    Image5,
-    Image6
-  ];
-
-  const amenityImages: string[] = [
-    Image5,
-    Image6,
-    Image1,
-    Image2,
-    Image3,
-    Image4
-  ];
-
-  const locationImages: string[] = [
-    Image5,
-    Image6,
-    Image1,
-    Image2,
-    Image3,
-    Image4    
-  ];
-
-  // Lightbox-enabled ImageGrid
-  const ImageGrid = ({ images }: { images: string[] }) => {
-    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-    const showPrev = () => {
-      if (selectedIndex === null) return;
-      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
-    };
-
-    const showNext = () => {
-      if (selectedIndex === null) return;
-      setSelectedIndex((selectedIndex + 1) % images.length);
-    };
-
-    return (
-      <>
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {images.map((src, i) => (
-            <div
-              key={i}
-              className="cursor-pointer rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform"
-              onClick={() => setSelectedIndex(i)}
-            >
-              <img src={src} alt={`Gallery ${i}`} className="w-full h-64 object-cover" />
-            </div>
-          ))}
-        </div>
-
-        {/* Lightbox */}
-        <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
-          <DialogContent className="max-w-6xl p-4 bg-background rounded-xl [&>button]:hidden">
-            {selectedIndex !== null && (
-              <div className="relative">
-                {/* Close */}
-                <button
-                  className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-2 z-10"
-                  onClick={() => setSelectedIndex(null)}
-                  aria-label="Close"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-
-                {/* Main image + nav */}
-                <div className="flex items-center justify-center">
-                  <button
-                    onClick={showPrev}
-                    className="absolute left-2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
-                    aria-label="Previous image"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-
-                  <img
-                    src={images[selectedIndex]}
-                    alt={`Large ${selectedIndex}`}
-                    className="max-h-[70vh] mx-auto rounded-xl object-contain"
-                  />
-
-                  <button
-                    onClick={showNext}
-                    className="absolute right-2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
-                    aria-label="Next image"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </div>
-
-                {/* Thumbnails */}
-                <div className="flex gap-2 mt-4 overflow-x-auto p-2">
-                  {images.map((src, i) => (
-                    <img
-                      key={i}
-                      src={src}
-                      alt={`Thumb ${i}`}
-                      className={`h-20 w-28 object-cover rounded-lg cursor-pointer transition-all ${
-                        i === selectedIndex ? "ring-4 ring-primary" : "opacity-80 hover:opacity-100"
-                      }`}
-                      onClick={() => setSelectedIndex(i)}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </DialogContent>
-        </Dialog>
-      </>
-    );
-  };
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -149,7 +22,6 @@ const Gallery = () => {
 
         <div className="relative z-10 text-center text-white px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6">
-            <Camera className="w-5 h-5 text-gold" />
             <span className="font-semibold">Visual Gallery</span>
           </div>
 
@@ -163,79 +35,8 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Gallery Tabs (only images inside tabs; no extra content) */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <Tabs defaultValue="architecture" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-12 h-14">
-              <TabsTrigger value="architecture" className="flex items-center gap-2 text-sm">
-                <Building className="w-4 h-4" />
-                Architecture
-              </TabsTrigger>
-              <TabsTrigger value="amenities" className="flex items-center gap-2 text-sm">
-                <ImageIcon className="w-4 h-4" />
-                Amenities
-              </TabsTrigger>
-              <TabsTrigger value="location" className="flex items-center gap-2 text-sm">
-                <Camera className="w-4 h-4" />
-                Material 
-              </TabsTrigger>
-              <TabsTrigger value="virtual" className="flex items-center gap-2 text-sm">
-                <Video className="w-4 h-4" />
-                Virtual Tour
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="architecture">
-              <ImageGrid images={architectureImages} />
-            </TabsContent>
-
-            <TabsContent value="amenities">
-              <ImageGrid images={amenityImages} />
-            </TabsContent>
-
-            <TabsContent value="location">
-              <ImageGrid images={locationImages} />
-            </TabsContent>
-
-            {/* If you have virtual tour images, add them here; else you can keep your "Coming Soon" cards */}
-            <TabsContent value="virtual">
-              {/* Example: keep your existing "Coming Soon" cards, or replace with images: */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="bg-card rounded-3xl p-8 shadow-luxury text-center">
-                  <div className="bg-primary p-6 rounded-xl w-fit mx-auto mb-6">
-                    <Video className="w-12 h-12 text-primary-foreground" />
-                  </div>
-                  <h4 className="text-2xl font-bold heading-font mb-4">360° Virtual Tour</h4>
-                  <p className="text-muted-foreground body-font mb-6">
-                    Experience a complete 360-degree virtual walkthrough of our sample apartments and common areas.
-                  </p>
-                  <Button variant="default" size="lg">
-                    Coming Soon
-                  </Button>
-                </div>
-
-                <div className="bg-card rounded-3xl p-8 shadow-luxury text-center">
-                  <div className="bg-secondary p-6 rounded-xl w-fit mx-auto mb-6">
-                    <Building className="w-12 h-12 text-secondary-foreground" />
-                  </div>
-                  <h4 className="text-2xl font-bold heading-font mb-4">Floor Plans</h4>
-                  <p className="text-muted-foreground body-font mb-6">
-                    Explore detailed, interactive floor plans for all apartment configurations and layouts.
-                  </p>
-                  <Button
-                    className="bg-transparent text-primary border-2 border-primary"
-                    size="lg"
-                    onClick={() => window.open(brochure, "_blank")}
-                  >
-                    View Floor Plans
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+      {/* ✅ Photo Showcase Component */}
+      <PhotoShowcase />
 
       {/* Stats Section */}
       <section className="py-20 bg-background">
@@ -280,7 +81,7 @@ const Gallery = () => {
               <Button
                 className="bg-transparent text-primary border-2 border-primary"
                 size="lg"
-                onClick={() => window.open(brochure, "_blank")}
+                onClick={() => window.open(floorPlans, "_blank")}
               >
                 Download Portfolio
               </Button>

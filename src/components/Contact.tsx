@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Crown, Phone, Mail, MapPin, Clock, Download, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import brochure from "@/assets/portfolio.pdf";
+import floorPlans from "@/assets/floorPlans.pdf";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -219,7 +220,7 @@ const Contact = () => {
                   Project Portfolio
                 </Button>
                 <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
-                  onClick={() => window.open(brochure, "_blank")}
+                  onClick={() => window.open(floorPlans, "_blank")}
                   >
                   <Download className="w-5 h-5" />
                   Floor Plans
