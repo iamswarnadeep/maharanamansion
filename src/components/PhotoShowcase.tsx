@@ -155,7 +155,7 @@ const ImageGrid = ({ images }: { images: string[] }) => {
 // ✅ Main Showcase Component
 const PhotoShowcase = () => {
   return (
-    <section className="py-20 bg-background" data-aos="fade-left">
+    <section className="py-20 bg-background" data-aos="fade-up">
       <div className="container mx-auto px-4">
         <Tabs defaultValue="architecture" className="w-full">
           <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-12 h-14">

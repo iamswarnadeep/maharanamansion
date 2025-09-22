@@ -138,13 +138,13 @@ const Footer = () => {
         </div>
       </div>
       <FloatingWhatsApp
-        phoneNumber="+918177802100"
-        accountName="Maharana Mansion"
+        phoneNumber="+918208710487"
+        accountName="Gennext Infratech"
         allowEsc
         allowClickAway
         notification
         notificationSound
-        statusMessage="Typically replies within 1 mins"
+        statusMessage="Typically replies within 1 min"
       />
     </footer>
   );
