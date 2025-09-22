@@ -116,7 +116,7 @@ const PricingSection = () => {
         </div>
 
         {/* Additional Benefits */}
-        <div className="text-center" data-aos="fade-left">
+        <div className="text-center" data-aos="fade-up">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="flex items-center justify-center gap-3 bg-card border border-black border-solid rounded-xl p-4">
               <Users className="w-5 h-5 text-primary" />
