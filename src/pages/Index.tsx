@@ -19,7 +19,7 @@ const Index = () => {
       <About />
       <section id="amenities" className="pt-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center" data-aos="fade-left">
+          <div className="text-center" data-aos="fade-right">
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-6 py-2 mb-6">
               <Crown className="w-5 h-5 text-gold" />
               <span className="text-gold font-semibold">Gallery</span>
