@@ -43,7 +43,7 @@ const PricingSection = () => {
   return (
     <section className="py-20 bg-background" >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16" data-aos="fade-left">
+        <div className="text-center mb-16" data-aos="fade-right">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-2 mb-6">
             <Ruler className="w-5 h-5 text-primary" />
             <span className="font-semibold text-primary">Exclusive Pricing</span>
@@ -59,7 +59,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12" data-aos="fade-left">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12" data-aos="fade-right">
           {pricingPlans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
