@@ -77,7 +77,7 @@ const Contact = () => {
             <span className="text-primary font-semibold">Get in Touch</span>
           </div>
 
-          <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold royal-heading mb-6 gradient-animate-text">
             Schedule Your
             <span className="block text-gold">Royal Visit</span>
           </h2>
@@ -140,7 +140,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" variant="royal" size="lg" className="w-full">
+              <Button type="submit" variant="royal" size="lg" className="w-full gradient-animate">
                 <Send className="w-5 h-5" />
                 Submit Enquiry
               </Button>
@@ -213,7 +213,7 @@ const Contact = () => {
                 Get detailed information about floor plans, pricing, and payment options.
               </p>
               <div className="space-y-3">
-                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+                <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary gradient-animate"
                   onClick={() => window.open(brochure, "_blank")}
                   >
                   <Download className="w-5 h-5" />

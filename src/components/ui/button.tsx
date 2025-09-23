@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-soft hover:shadow-luxury",
+        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-soft hover:shadow-luxury gradient-animate",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground shadow-soft",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 gradient-animate",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        royal: "bg-royal text-royal-foreground hover:bg-royal-light shadow-luxury hover:shadow-gold",
-        gold: "bg-gold text-foreground hover:bg-gold-dark shadow-gold font-bold",
+        royal: "bg-royal text-royal-foreground hover:bg-royal-light shadow-luxury hover:shadow-gold gradient-animate-slow",
+        gold: "bg-gold text-foreground hover:bg-gold-dark shadow-gold font-bold gradient-animate",
         premium: "bg-card border-2 border-gold text-foreground hover:bg-gold hover:text-foreground shadow-soft hover:shadow-gold",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-luxury font-bold text-lg px-8 py-4"
+        hero: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-luxury font-bold text-lg px-8 py-4 gradient-animate"
       },
       size: {
         default: "h-12 px-6 py-3",

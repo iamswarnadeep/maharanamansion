@@ -49,7 +49,7 @@ const PricingSection = () => {
             <span className="font-semibold text-primary">Exclusive Pricing</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6 gradient-animate-text">
             Maharana Mansion Pricing
           </h2>
           
@@ -103,10 +103,11 @@ const PricingSection = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button variant="default" size="lg"
                     onClick={() => window.open(brochure, "_blank")}
+                    className="gradient-animate"
                     >
                     View Portfolio
                   </Button>
-                  <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "#contact")}>
+                  <Button className="bg-transparent text-primary border-2 border-primary gradient-animate-text" size="lg" onClick={() => (window.location.href = "#contact")}>
                     Book Now
                   </Button>
                 </div>

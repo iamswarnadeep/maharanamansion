@@ -89,10 +89,10 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
+              <Button className="bg-transparent text-primary border-2 border-primary gradient-animate-text" size="sm" onClick={() => window.open(brochure, "_blank")}>
                 Download Portfolio
               </Button>
-              <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"}>
+              <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"} className="gradient-animate">
                 <Crown className="w-4 h-4" />
                 Enquire Now
               </Button>

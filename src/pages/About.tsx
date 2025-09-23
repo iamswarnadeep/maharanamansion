@@ -98,7 +98,7 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8 gradient-animate-text">
               More Than Just Four Walls
             </h2>
             
@@ -127,7 +127,7 @@ const About = () => {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6 gradient-animate-text">
               Our Guiding Principles
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto body-font">
@@ -158,7 +158,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8">
+                <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-8 gradient-animate-text">
                   Why Neemrana, 
                   <span className="block text-primary">Rajasthan?</span>
                 </h2>

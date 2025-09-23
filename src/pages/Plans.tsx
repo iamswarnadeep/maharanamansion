@@ -135,10 +135,11 @@ const Plans = () => {
       <div className="flex flex-col sm:flex-row gap-3">
         <Button variant="default" size="lg"
           onClick={() => window.open(brochure, "_blank")}
+          className="gradient-animate"
           >
           View Floor Plan
         </Button>
-        <Button className="bg-transparent text-primary border-2 border-primary" size="lg" onClick={() => (window.location.href = "/contact")}>
+        <Button className="bg-transparent text-primary border-2 border-primary gradient-animate-text" size="lg" onClick={() => (window.location.href = "/contact")}>
           Schedule Visit
         </Button>
       </div>
@@ -178,7 +179,7 @@ const Plans = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold royal-heading heading-font mb-6 gradient-animate-text">
               Three Phases of Excellence
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-font">
