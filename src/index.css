@@ -279,30 +279,38 @@ All colors are HSL values inspired by Rajasthani palace architecture
 
 @layer utilities {
 
-  /* Background gradient as primary */
+  /* Background gradient as primary - Updated for animations */
   .bg-primary {
     background: linear-gradient(135deg,
         rgba(235, 30, 39, 1) 0%,
-        rgba(75, 6, 63, 1) 100%) !important;
+        rgba(75, 6, 63, 1) 100%,
+        rgba(235, 30, 39, 1) 100%);
+    background-size: 200% 200%;
   }
 
   .bg-secondary {
     background: linear-gradient(135deg,
         rgba(235, 30, 39, 1) 0%,
-        rgba(75, 6, 63, 1) 100%) !important;
+        rgba(75, 6, 63, 1) 100%,
+        rgba(235, 30, 39, 1) 100%);
+    background-size: 200% 200%;
   }
 
   .bg-royal {
     background: linear-gradient(135deg,
         rgb(134, 5, 12) 0%,
-        rgba(75, 6, 63, 1) 100%) !important;
+        rgba(75, 6, 63, 1) 100%,
+        rgb(134, 5, 12) 100%);
+    background-size: 200% 200%;
   }
 
-  /* Text gradient for text-primary */
+  /* Text gradient for text-primary - Updated for animations */
   .text-primary {
     background: linear-gradient(135deg,
         rgba(235, 30, 39, 1) 0%,
-        rgba(75, 6, 63, 1) 100%);
+        rgba(75, 6, 63, 1) 100%,
+        rgba(235, 30, 39, 1) 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
