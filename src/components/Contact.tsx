@@ -140,7 +140,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button type="submit" variant="royal" size="lg" className="w-full gradient-animate">
+              <Button type="submit" variant="default" size="lg" className="w-full gradient-animate">
                 <Send className="w-5 h-5" />
                 Submit Enquiry
               </Button>
@@ -153,7 +153,7 @@ const Contact = () => {
             <div className="grid gap-6">
               <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary p-3 rounded-xl">
+                  <div className="bg-primary gradient-animate p-3 rounded-xl">
                     <Phone className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -179,7 +179,7 @@ const Contact = () => {
 
               <div className="bg-card rounded-2xl p-6 shadow-soft hover:shadow-luxury transition-all duration-300 border border-border">
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary p-3 rounded-xl">
+                  <div className="bg-primary gradient-animate p-3 rounded-xl">
                     <MapPin className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -205,7 +205,7 @@ const Contact = () => {
             </div>
 
             {/* Download Section */}
-            <div className="bg-secondary rounded-2xl p-8 text-center">
+            <div className="bg-primary gradient-animate rounded-2xl p-8 text-center">
               <h4 className="text-2xl font-bold text-secondary-foreground mb-4">
                 Download Resources
               </h4>

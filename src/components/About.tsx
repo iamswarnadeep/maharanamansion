@@ -84,7 +84,7 @@ const About = () => {
               data-aos="fade-right"
               className=" bg-card rounded-2xl p-8 shadow-soft hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 luxury-hover"
             >
-              <div className="bg-primary p-4 rounded-xl w-fit mb-6">
+              <div className="bg-primary gradient-animate p-4 rounded-xl w-fit mb-6">
                 <feature.icon className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-bold mb-4 heading-font">{feature.title}</h3>

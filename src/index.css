@@ -282,8 +282,9 @@ All colors are HSL values inspired by Rajasthani palace architecture
   /* Background gradient as primary - Updated for animations */
   .bg-primary {
     background: linear-gradient(135deg,
-        rgba(235, 30, 39, 1) 0%,
-        rgba(75, 6, 63, 1) 100%,
+        rgba(235, 30, 39, 1) 10%,
+        rgba(75, 6, 63, 1) 80%,
+        rgba(75, 6, 63, 1) 60%,
         rgba(235, 30, 39, 1) 100%);
     background-size: 200% 200%;
   }

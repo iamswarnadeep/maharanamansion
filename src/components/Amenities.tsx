@@ -64,7 +64,7 @@ const Amenities = () => {
         </div>
 
         {/* Feature Highlight */}
-        <div className="bg-primary rounded-3xl p-8 lg:p-12 text-center" data-aos="fade-right">
+        <div className="bg-primary gradient-animate rounded-3xl p-8 lg:p-12 text-center" data-aos="fade-right">
           <h3 className="text-3xl lg:text-4xl font-bold text-royal-foreground mb-6">
             Elevating everyday living with the gift of nature
           </h3>

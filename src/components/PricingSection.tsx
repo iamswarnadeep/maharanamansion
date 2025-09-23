@@ -66,7 +66,7 @@ const PricingSection = () => {
               <div key={index} className={`bg-gradient-to-br ${plan.gradient} rounded-3xl p-8 shadow-luxury hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}>
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-4">
-                    <div className={`${plan.bgColor} p-3 rounded-xl`}>
+                    <div className={`${plan.bgColor} gradient-animate p-3 rounded-xl`}>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <div>
