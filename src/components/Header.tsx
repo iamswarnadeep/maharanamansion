@@ -92,7 +92,7 @@ const Header = () => {
               <Button className="bg-transparent text-primary border-2 border-primary" size="sm" onClick={() => window.open(brochure, "_blank")}>
                 Download Portfolio
               </Button>
-              <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"} className="moving-gradient">
+              <Button variant="default" size="sm" onClick={() => window.location.href = "#contact"}>
                 <Crown className="w-4 h-4" />
                 Enquire Now
               </Button>

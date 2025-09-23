@@ -322,27 +322,3 @@ All colors are HSL values inspired by Rajasthani palace architecture
         rgba(235, 30, 39, 1) 0%,
         rgba(75, 6, 63, 1) 100%) !important;
 }
-
-.moving-gradient {
-  background: linear-gradient(
-    135deg,
-    rgba(235, 30, 39, 1) 0%,
-    rgba(75, 6, 63, 1) 100%
-  ) !important; /* force override */
-  background-size: 200% 200% !important;
-  animation: gradientMove 6s ease infinite !important;
-  color: white !important; /* make sure text/icon stays visible */
-  border: none !important;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
