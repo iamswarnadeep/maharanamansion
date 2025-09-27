@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Home, Crown, Ruler, Users } from "lucide-react";
 import brochure from "@/assets/portfolio.pdf";
+import oneBHKplan from "@/assets/1bhk-plan.pdf";
+import twoBHKplan from "@/assets/2bhk-plan.pdf";
 
 const PricingSection = () => {
   const pricingPlans = [
@@ -9,6 +11,7 @@ const PricingSection = () => {
       area: "404+ sq.ft.",
       price: "₹14.50 Lacs",
       originalPrice: "₹16 Lakhs",
+      link: oneBHKplan,
       features: [
         "Large living and dining area",
         "One spacious bedroom",
@@ -26,6 +29,7 @@ const PricingSection = () => {
       area: "635+ sq.ft.",
       price: "₹19.50 Lacs",
       originalPrice: "₹22 Lakhs",
+      link: twoBHKplan,
       features: [
         "Large living and dining area",
         "Two spacious bedrooms",
@@ -102,10 +106,10 @@ const PricingSection = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button variant="default" size="lg"
-                    onClick={() => window.open(brochure, "_blank")}
+                    onClick={() => window.open(plan.link, "_blank")}
                     className="gradient-animate"
                     >
-                    View Portfolio
+                    View Floor Plan
                   </Button>
                   <Button className="bg-transparent text-primary border-2 border-primary gradient-animate-text" size="lg" onClick={() => (window.location.href = "#contact")}>
                     Book Now
