@@ -5,6 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Home, Building, Crown, MapPin, Ruler, Users } from "lucide-react";
 import floorPlans from "@/assets/floor-plans.jpg";
 import brochure from "@/assets/portfolio.pdf";
+import oneBHKplan from "@/assets/1bhk-plan.pdf";
+import twoBHKplan from "@/assets/2bhk-plan.pdf";
 
 const Plans = () => {
   const maharanaPlans = [
@@ -13,6 +15,7 @@ const Plans = () => {
       area: "404+ sq.ft.",
       configuration: "G+2",
       price: "Starting ₹14.50 Lacs",
+      link: oneBHKplan,
       features: [
         "Large living and dining area",
         "One spacious bedroom",
@@ -26,6 +29,7 @@ const Plans = () => {
       area: "635+ sq.ft.", 
       configuration: "G+2",
       price: "Starting ₹19.50 Lacs",
+      link: twoBHKplan,
       features: [
         "Large living and dining area",
         "Two spacious bedrooms",
@@ -134,7 +138,7 @@ const Plans = () => {
 
       <div className="flex flex-col sm:flex-row gap-3">
         <Button variant="default" size="lg"
-          onClick={() => window.open(brochure, "_blank")}
+          onClick={() => window.open(plan.link, "_blank")}
           className="gradient-animate"
           >
           View Floor Plan

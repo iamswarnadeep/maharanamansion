@@ -85,7 +85,7 @@ const Amenities = () => {
             <div className="flex flex-col items-center">
               {/* <div className="text-4xl font-bold text-gold mb-2">80%</div> */}
               <HeartPulse className="w-10 h-10 text-gold" />
-              <div className="text-royal-foreground/80">A Healthier Lifestyle <br/>Narcissist You</div>
+              <div className="text-royal-foreground/80">A Healthier Lifestyle <br/>Nourishes You</div>
             </div>
           </div>
         </div>

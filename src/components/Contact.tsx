@@ -6,6 +6,7 @@ import { Crown, Phone, Mail, MapPin, Clock, Download, Send } from "lucide-react"
 import { useToast } from "@/hooks/use-toast";
 import brochure from "@/assets/portfolio.pdf";
 import floorPlans from "@/assets/floorPlans.pdf";
+import towerplan from "@/assets/DetailedTowerPlan.pdf";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -214,10 +215,10 @@ const Contact = () => {
               </p>
               <div className="space-y-3">
                 <Button variant="default" size="lg" className="w-full bg-secondary-foreground/30 border-secondary-foreground/10 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary gradient-animate"
-                  onClick={() => window.open(brochure, "_blank")}
+                  onClick={() => window.open(towerplan, "_blank")}
                   >
                   <Download className="w-5 h-5" />
-                  Project Portfolio
+                  Detailed Tower Plan
                 </Button>
                 <Button variant="outline" size="lg" className="w-full bg-secondary-foreground/10 border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
                   onClick={() => window.open(floorPlans, "_blank")}
