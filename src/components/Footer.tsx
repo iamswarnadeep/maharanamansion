@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Crown, Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube, Newspaper } from "lucide-react";
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
-import CheckerFun from "@/components/checker/checkerFun";
+// import CheckerFun from "@/components/checker/checkerFun";
 import logo from "@/assets/logo.png";
 import mainlogo from "@/assets/maharana-logo.png";
 
@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-royal text-royal-foreground">
-      <CheckerFun />
+      {/* <CheckerFun /> */}
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
