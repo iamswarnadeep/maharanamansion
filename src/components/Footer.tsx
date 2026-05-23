@@ -117,7 +117,12 @@ const Footer = () => {
 
               <div className="flex items-start gap-3">
                 <Newspaper className="w-5 h-5 text-gold mt-1" />
-                <a className="text-royal-foreground/80" href="/terms" target="_blank">Terms & Conditions</a>
+                <Link className="text-royal-foreground/80 hover:text-gold transition-colors" to="/terms">Terms & Conditions</Link>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Newspaper className="w-5 h-5 text-gold mt-1" />
+                <Link className="text-royal-foreground/80 hover:text-gold transition-colors" to="/privacy-policy">Privacy Policy</Link>
               </div>
             </div>
           </div>
